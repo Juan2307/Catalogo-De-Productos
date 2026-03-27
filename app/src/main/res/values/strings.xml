@@ -1,3 +1,116 @@
 <resources>
-    <string name="app_name">Catalogo De Productos</string>
+    <!-- ================= NOMBRE Y FRASE ================= -->
+    <!-- Nombre y Frase (imagen) -->
+    <string name="desc_portada">Imagen de portada</string>
+    <string name="desc_foto_perfil">Foto de perfil</string>
+
+    <!-- Nombre y Frase (texto) -->
+    <string name="nombre_usuario">Ana Lorena Guevara</string>
+    <string name="frase_usuario">TRABAJA DURO Y DEJA QUE EL EXITO SEA EL QUE HAGA EL RUIDO</string>
+
+
+    <!-- ================= INFORMACIÓN PERSONAL ================= -->
+    <!-- información personal (texto) -->
+    <string name="info_personal">Información Personal</string>
+    <string name="edad">Edad</string>
+    <string name="peso">Peso</string>
+    <string name="estatura">Estatura</string>
+    <string name="imc">IMC</string>
+
+    <!-- Valores (texto) -->
+    <string name="edad_numero">28 años</string>
+    <string name="peso_numero">72 kg</string>
+    <string name="estatura_numero">1.72 m</string>
+    <string name="imc_numero">23.5 (Normal)</string>
+
+
+    <!-- ================= SECCION MOTIVACIONAL ================= -->
+    <!-- Motivacion (imagen) -->
+    <string name="desc_gym">Imagen motivacional de gimnasio</string>
+
+    <!-- Motivacion (texto) -->
+    <string name="frase_gym">Encuentra tu límite con nosotros</string>
+
+
+    <!-- ================= CONTACTO ================= -->
+    <!-- Contacto (texto) -->
+    <string name="contacto">sportpoli@corporative.com</string>
+
+
+    <!-- ================= LOGO ================= -->
+    <!-- Logo (imagen) -->
+    <string name="desc_logo">Imagen logo</string>
+
+
+    <!-- ================= MENU ================= -->
+    <!-- Menu (imágen) -->
+    <string name="desc_menu">Imagen menu</string>
+    <string name="desc_perfil">Imagen fotos</string>
+    <string name="desc_fotos">Imagen fotos</string>
+    <string name="desc_videos">Imagen videos</string>
+    <string name="desc_web">Imagen web</string>
+    <string name="desc_botones">Imagen botones</string>
+
+    <!-- Menu (texto) -->
+    <string name="perfil">Perfil</string>
+    <string name="fotos">Fotos</string>
+    <string name="videos">Videos</string>
+    <string name="web">Web</string>
+    <string name="boton">Botones</string>
+
+    <!-- ================= BOTONES ================= -->
+    <!-- Botones (imágen) -->
+    <string name="desc_btn_menu">Imagen boton menu</string>
+    <string name="desc_btn_perfil">Imagen boton fotos</string>
+    <string name="desc_btn_fotos">Imagen boton fotos</string>
+    <string name="desc_btn_videos">Imagen boton videos</string>
+    <string name="desc_btn_web">Imagen boton web</string>
+    <string name="desc_btn_botones">Imagen boton botones</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- ================= FOTOS ================= -->
+    <!-- Fondo (imágen) -->
+    <string name="desc_fondo">Imagen de portada</string>
+
+    <!-- Nombre y Frase (texto) -->
+    <string name="fondo_fotos">Todo lo que necesitas en un solo lugar"</string>
+
+    <!-- ================= PRODUCTOS ================= -->
+    <!-- Carrito (imágen) -->
+    <string name="desc_carrito">Imagen de carrito</string>
+
+    <!-- Productos (imágen) -->
+    <string name="desc_producto1">Imagen de producto 1</string>
+    <string name="desc_producto2">Imagen de producto 2</string>
+    <string name="desc_producto3">Imagen de producto 3</string>
+    <string name="desc_producto4">Imagen de producto 4</string>
+
+    <!-- Productos (texto) -->
+    <string name="productos">Productos</string>
+    <string name="producto1">Chaqueta Puller Adidas</string>
+    <string name="producto2">Guayos Puma Predator</string>
+    <string name="producto3">Snowboarding Board Fox</string>
+    <string name="producto4">Raqueta Dull Wilson</string>
+
+    <!-- Productos Valor (texto) -->
+    <string name="val_producto1">$325.000</string>
+    <string name="val_producto2">$740.000</string>
+    <string name="val_producto3">$1’200.000</string>
+    <string name="val_producto4">$630.000</string>
+
+
+
+
+
 </resources>
