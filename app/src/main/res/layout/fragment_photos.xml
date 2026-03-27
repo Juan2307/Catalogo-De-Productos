@@ -1,16 +1,404 @@
-<!-- res/layout/fragment_photos.xml -->
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:background="#F0F4F8">
+    android:background="@color/background_gray">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="¡Hola! Esta es la sección de fotos."
-        android:textSize="24sp"
-        android:textColor="#374151"
-        android:textStyle="bold" />
-</LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/footer_photos"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Modulo Fotos"
+                android:textColor="#CCCCCC"
+                android:textSize="14sp"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- Header Image with Text -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:layout_marginBottom="16dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/portada_fondo" />
+
+                <TextView
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="todo lo que necesitas en un solo lugar"
+                    android:textColor="@color/sport_blue"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:shadowColor="@color/white"
+                    android:shadowDx="2"
+                    android:shadowDy="2"
+                    android:shadowRadius="1" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Productos"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="20dp"
+                android:textColor="#333333" />
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:alignmentMode="alignMargins">
+
+                <!-- Producto 1 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardBackgroundColor="@color/sport_blue"
+                    app:cardElevation="6dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="12dp">
+
+                        <ImageView
+                            android:id="@+id/cart1"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_alignParentEnd="true"
+                            android:src="@drawable/shopping_cart"
+                            app:tint="@color/white" />
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/img_container1"
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:layout_below="@id/cart1"
+                            android:layout_marginTop="8dp"
+                            app:cardCornerRadius="8dp">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/producto1"
+                                android:scaleType="centerInside"
+                                android:padding="8dp"/>
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:id="@+id/title1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/img_container1"
+                            android:layout_marginTop="12dp"
+                            android:text="chaqueta\npuller\nadidas"
+                            android:textColor="@color/white"
+                            android:textSize="12sp"
+                            android:gravity="center"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/title1"
+                            android:text="$325.000"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:gravity="center"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- Producto 2 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardBackgroundColor="@color/sport_blue"
+                    app:cardElevation="6dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="12dp">
+
+                        <ImageView
+                            android:id="@+id/cart2"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_alignParentEnd="true"
+                            android:src="@drawable/shopping_cart"
+                            app:tint="@color/white" />
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/img_container2"
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:layout_below="@id/cart2"
+                            android:layout_marginTop="8dp"
+                            app:cardCornerRadius="8dp">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/producto2"
+                                android:scaleType="centerInside"
+                                android:padding="8dp"/>
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:id="@+id/title2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/img_container2"
+                            android:layout_marginTop="12dp"
+                            android:text="guayos\npuma\npredator"
+                            android:textColor="@color/white"
+                            android:textSize="12sp"
+                            android:gravity="center"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/title2"
+                            android:text="$740.000"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:gravity="center"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- Producto 3 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardBackgroundColor="@color/sport_blue"
+                    app:cardElevation="6dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="12dp">
+
+                        <ImageView
+                            android:id="@+id/cart3"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_alignParentEnd="true"
+                            android:src="@drawable/shopping_cart"
+                            app:tint="@color/white" />
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/img_container3"
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:layout_below="@id/cart3"
+                            android:layout_marginTop="8dp"
+                            app:cardCornerRadius="8dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/producto3"
+                                android:scaleType="centerInside"
+                                android:padding="8dp"/>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:id="@+id/title3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/img_container3"
+                            android:layout_marginTop="12dp"
+                            android:text="snowboard\ning board\nfox"
+                            android:textColor="@color/white"
+                            android:textSize="12sp"
+                            android:gravity="center"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/title3"
+                            android:text="$1’200.000"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:gravity="center"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- Producto 4 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardBackgroundColor="@color/sport_blue"
+                    app:cardElevation="6dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="12dp">
+
+                        <ImageView
+                            android:id="@+id/cart4"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_alignParentEnd="true"
+                            android:src="@drawable/shopping_cart"
+                            app:tint="@color/white" />
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/img_container4"
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:layout_below="@id/cart4"
+                            android:layout_marginTop="8dp"
+                            app:cardCornerRadius="8dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/producto4"
+                                android:scaleType="centerInside"
+                                android:padding="8dp"/>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:id="@+id/title4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/img_container4"
+                            android:layout_marginTop="12dp"
+                            android:text="raqueta\ndull wilson"
+                            android:textColor="@color/white"
+                            android:textSize="12sp"
+                            android:gravity="center"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/title4"
+                            android:text="$630.000"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:gravity="center"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </GridLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="sportpoli@corporative.com"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/sport_blue"
+                android:gravity="center"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="20dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- FOOTER CIRCULAR HD -->
+    <LinearLayout
+        android:id="@+id/footer_photos"
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:elevation="12dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/foot_profile"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/footer_icon_bg"
+            android:padding="12dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/perfil"
+            app:tint="@color/white" />
+
+        <ImageButton
+            android:id="@+id/foot_video"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/footer_icon_bg"
+            android:padding="16dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/video"
+            app:tint="@color/white" />
+
+        <ImageButton
+            android:id="@+id/foot_web"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/footer_icon_bg"
+            android:padding="16dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/web"
+            app:tint="@color/white" />
+
+        <ImageButton
+            android:id="@+id/foot_buttons"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/footer_icon_bg"
+            android:padding="16dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/buttons"
+            app:tint="@color/white" />
+    </LinearLayout>
+
+</RelativeLayout>

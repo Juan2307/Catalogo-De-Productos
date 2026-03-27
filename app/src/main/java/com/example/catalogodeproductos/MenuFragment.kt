@@ -2,44 +2,66 @@ package com.example.catalogodeproductos
 
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
 import androidx.fragment.app.Fragment
 
 class MenuFragment : Fragment(R.layout.fragment_menu) {
 
-    // Define una interfaz para comunicarse con la Activity. Es un contrato.
-    // La Activity que contenga este fragmento DEBE implementar esta interfaz.
     interface OnOptionClickListener {
-
         fun onOptionClicked(option: String)
-
     }
 
     private var listener: OnOptionClickListener? = null
 
-    // Este método se llama justo después de que la vista del fragmento ha sido creada.
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-
         super.onViewCreated(view, savedInstanceState)
 
-        // Se comprueba si la Activity contenedora implementa la interfaz de comunicación.
-        val context = context
         if (context is OnOptionClickListener) {
-            listener = context
-        } else {
-            // Si no la implementa, lanza un error para avisar al desarrollador.
-            throw ClassCastException("$context must implement OnOptionClickListener")
+            listener = context as OnOptionClickListener
         }
 
-        // Se asigna un listener a cada botón. Al hacer clic, se llama al método de la interfaz.
-        view.findViewById<Button>(R.id.btn_profile)
-            .setOnClickListener { listener?.onOptionClicked("profile") }
-        view.findViewById<Button>(R.id.btn_photos)
-            .setOnClickListener { listener?.onOptionClicked("photos") }
-        view.findViewById<Button>(R.id.btn_video)
-            .setOnClickListener { listener?.onOptionClicked("video") }
-        view.findViewById<Button>(R.id.btn_web)
-            .setOnClickListener { listener?.onOptionClicked("web") }
+        view.findViewById<View>(R.id.btn_profile).setOnClickListener { 
+            highlightOption("profile")
+            listener?.onOptionClicked("profile") 
+        }
+        view.findViewById<View>(R.id.btn_photos).setOnClickListener { 
+            highlightOption("photos")
+            listener?.onOptionClicked("photos") 
+        }
+        view.findViewById<View>(R.id.btn_video).setOnClickListener { 
+            highlightOption("video")
+            listener?.onOptionClicked("video") 
+        }
+        view.findViewById<View>(R.id.btn_web).setOnClickListener { 
+            highlightOption("web")
+            listener?.onOptionClicked("web") 
+        }
+        view.findViewById<View>(R.id.btn_buttons).setOnClickListener { 
+            highlightOption("buttons")
+            listener?.onOptionClicked("buttons") 
+        }
     }
 
+    fun highlightOption(option: String) {
+        val views = listOf(
+            view?.findViewById<View>(R.id.btn_profile),
+            view?.findViewById<View>(R.id.btn_photos),
+            view?.findViewById<View>(R.id.btn_video),
+            view?.findViewById<View>(R.id.btn_web),
+            view?.findViewById<View>(R.id.btn_buttons)
+        )
+
+        // Limpiar fondos
+        views.forEach { it?.setBackgroundResource(android.R.color.transparent) }
+
+        // Aplicar Highlight (Fondo semitransparente como el mockup)
+        val selectedView = when (option) {
+            "profile" -> views[0]
+            "photos" -> views[1]
+            "video" -> views[2]
+            "web" -> views[3]
+            "buttons" -> views[4]
+            else -> null
+        }
+        selectedView?.setBackgroundColor(0x33FFFFFF) // 20% blanco
+    }
 }
