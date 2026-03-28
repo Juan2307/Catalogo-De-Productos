@@ -15,36 +15,57 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="20dp">
+            android:padding="16dp">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Modulo Botones"
+                android:textColor="#CCCCCC"
+                android:textSize="14sp"
+                android:layout_marginBottom="10dp"/>
+
+            <!-- Botón SUPPORT -->
             <Button
+                android:id="@+id/btn_support"
                 android:layout_width="match_parent"
-                android:layout_height="65dp"
-                android:text="🎧 SUPPORT"
-                android:textSize="20sp"
+                android:layout_height="60dp"
+                android:text="SUPPORT"
+                android:textSize="18sp"
                 android:textStyle="bold"
                 android:textColor="@color/white"
                 android:backgroundTint="@color/sport_blue"
+                android:drawableStart="@android:drawable/stat_sys_phone_call"
+                android:drawablePadding="10dp"
+                android:paddingStart="20dp"
+                android:layout_marginBottom="12dp"
+                app:cornerRadius="30dp"
+                android:elevation="4dp"/>
+
+            <!-- Botón CATALOGO -->
+            <Button
+                android:id="@+id/btn_catalogo"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="CATALAGO"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/sport_blue"
+                android:drawableStart="@android:drawable/stat_sys_download"
+                android:drawablePadding="10dp"
+                android:paddingStart="20dp"
                 android:layout_marginBottom="16dp"
-                app:cornerRadius="8dp" />
+                app:cornerRadius="30dp"
+                android:elevation="4dp"/>
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="65dp"
-                android:text="📥 CATALOGO"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:textColor="@color/white"
-                android:backgroundTint="@color/sport_blue"
-                android:layout_marginBottom="24dp"
-                app:cornerRadius="8dp" />
-
+            <!-- Imagen Principal -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="320dp"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="6dp"
-                android:layout_marginBottom="24dp">
+                android:layout_height="380dp"
+                app:cardCornerRadius="0dp"
+                app:cardElevation="4dp"
+                android:layout_marginBottom="0dp">
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -52,24 +73,29 @@
                     android:src="@drawable/portada_fondo" />
             </androidx.cardview.widget.CardView>
 
-            <androidx.cardview.widget.CardView
+            <!-- Bloque Azul de Texto -->
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="4dp"
-                android:layout_marginBottom="30dp">
+                android:background="@color/sport_blue"
+                android:padding="24dp"
+                android:orientation="vertical">
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Gracias por visitar Sportpoli. Esperamos verte pronto de nuevo para seguir impulsando tu estilo de vida activo."
-                    android:textSize="18sp"
-                    android:textColor="@color/sport_blue"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
                     android:textStyle="bold"
-                    android:gravity="center"
-                    android:padding="24dp"
-                    android:lineSpacingExtra="4dp"/>
-            </androidx.cardview.widget.CardView>
+                    android:gravity="end"
+                    android:lineSpacingExtra="4dp"
+                    android:shadowColor="#40000000"
+                    android:shadowDx="2"
+                    android:shadowDy="2"
+                    android:shadowRadius="2"/>
+            </LinearLayout>
 
+            <!-- Email Link -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -78,12 +104,12 @@
                 android:textStyle="bold"
                 android:textColor="@color/sport_blue"
                 android:gravity="center"
-                android:layout_marginBottom="20dp" />
+                android:paddingVertical="20dp" />
 
         </LinearLayout>
     </ScrollView>
 
-    <!-- FOOTER CIRCULAR HD -->
+    <!-- FOOTER CIRCULAR (PERFIL, FOTOS, VIDEO, WEB) -->
     <LinearLayout
         android:id="@+id/footer_buttons_layout"
         android:layout_width="match_parent"
