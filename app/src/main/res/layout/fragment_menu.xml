@@ -1,34 +1,153 @@
-<!-- res/layout/fragment_menu.xml -->
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="280dp"
     android:layout_height="match_parent"
-    android:gravity="center_horizontal"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:background="@color/primary"
+    android:orientation="vertical">
 
-    <!-- Cada botón representa una opción del menú -->
-    <Button
-        android:id="@+id/btn_profile"
+    <!-- Sección Logo Superior -->
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Perfil" />
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="40dp"
+        android:paddingBottom="30dp">
 
-    <Button
-        android:id="@+id/btn_photos"
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/logos"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="SPORT POLI"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:letterSpacing="0.1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ACTIVA TU MEJOR VERSIÓN"
+            android:textColor="@color/primary_light"
+            android:textSize="10sp"
+            android:letterSpacing="0.05" />
+    </LinearLayout>
+
+    <!-- Divisor sutil -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#20FFFFFF"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp" />
+
+    <!-- Items de Navegación -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingTop="20dp">
+
+        <LinearLayout
+            android:id="@+id/btn_profile"
+            style="@style/MenuItemStyle">
+
+            <ImageView
+                style="@style/MenuItemIconStyle"
+                android:src="@drawable/perfil"
+                app:tint="@color/white" />
+
+            <TextView
+                style="@style/MenuItemTextStyle"
+                android:text="Perfil" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btn_photos"
+            style="@style/MenuItemStyle">
+
+            <ImageView
+                style="@style/MenuItemIconStyle"
+                android:src="@drawable/photo"
+                app:tint="@color/white" />
+
+            <TextView
+                style="@style/MenuItemTextStyle"
+                android:text="Fotos" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btn_video"
+            style="@style/MenuItemStyle">
+
+            <ImageView
+                style="@style/MenuItemIconStyle"
+                android:src="@drawable/video"
+                app:tint="@color/white" />
+
+            <TextView
+                style="@style/MenuItemTextStyle"
+                android:text="Video" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btn_web"
+            style="@style/MenuItemStyle">
+
+            <ImageView
+                style="@style/MenuItemIconStyle"
+                android:src="@drawable/web"
+                app:tint="@color/white" />
+
+            <TextView
+                style="@style/MenuItemTextStyle"
+                android:text="Web" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btn_buttons"
+            style="@style/MenuItemStyle">
+
+            <ImageView
+                style="@style/MenuItemIconStyle"
+                android:src="@drawable/buttons"
+                app:tint="@color/white" />
+
+            <TextView
+                style="@style/MenuItemTextStyle"
+                android:text="Botones" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Footer Logo -->
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Fotos" />
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="40dp">
 
-    <Button
-        android:id="@+id/btn_video"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Video" />
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/logos"
+            android:scaleType="fitCenter"/>
 
-    <Button
-        android:id="@+id/btn_web"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Web" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="SPORT POLI"
+            android:textColor="@color/primary_light"
+            android:textSize="12sp"
+            android:letterSpacing="0.05" />
+    </LinearLayout>
 
 </LinearLayout>

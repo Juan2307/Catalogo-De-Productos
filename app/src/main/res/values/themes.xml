@@ -1,9 +1,72 @@
 <resources>
-    <!-- Base application theme. -->
+    <!-- Tema Base Aplicación -->
     <style name="Base.Theme.CatalogoDeProductos" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <!-- Colores Personalizados -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorSecondary">@color/primary_light</item>
+        <item name="android:windowBackground">@color/background</item>
+
+        <!-- Tipografía Global -->
+        <item name="android:fontFamily">@font/nico_moji_regular</item>
+        <item name="fontFamily">@font/nico_moji_regular</item>
     </style>
 
     <style name="Theme.CatalogoDeProductos" parent="Base.Theme.CatalogoDeProductos" />
+
+    <!-- ESTILOS DE COMPONENTES: INFORMACIÓN DE PERFIL -->
+    <style name="ProfileInfoRow">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingTop">14dp</item>
+        <item name="android:paddingBottom">14dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:background">@drawable/profile_row_divider</item>
+    </style>
+
+    <style name="ProfileInfoLabel">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">@color/primary_light</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="android:fontFamily">@font/nico_moji_regular</item>
+    </style>
+
+    <style name="ProfileInfoValue">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:gravity">end</item>
+        <item name="android:fontFamily">@font/nico_moji_regular</item>
+    </style>
+
+    <!-- ESTILOS DE COMPONENTES: MENÚ LATERAL -->
+    <style name="MenuItemStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingStart">24dp</item>
+    </style>
+
+    <style name="MenuItemIconStyle">
+        <item name="android:layout_width">24dp</item>
+        <item name="android:layout_height">24dp</item>
+        <item name="android:scaleType">fitCenter</item>
+    </style>
+
+    <style name="MenuItemTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0.05</item>
+        <item name="android:fontFamily">@font/nico_moji_regular</item>
+    </style>
 </resources>

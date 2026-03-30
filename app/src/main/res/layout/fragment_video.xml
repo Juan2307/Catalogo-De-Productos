@@ -1,16 +1,414 @@
-<!-- res/layout/fragment_video.xml -->
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:background="#F0F4F8">
+    android:background="@color/background">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="¡Hola! Esta es la sección de video."
-        android:textSize="24sp"
-        android:textColor="#374151"
-        android:textStyle="bold" />
-</LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/footer_video"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Breadcrumb -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Modulo Video"
+                android:textColor="@color/text_hint"
+                android:textSize="14sp"
+                android:layout_margin="16dp"
+                android:fontFamily="@font/nico_moji_regular" />
+
+            <!-- Headline Artístico Mejorado -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="40dp">
+
+                <View
+                    android:layout_width="600dp"
+                    android:layout_height="1.5dp"
+                    android:background="@color/primary"
+                    android:rotation="-40"
+                    android:alpha="0.3"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="-150dp" />
+
+                <TextView
+                    android:id="@+id/headline_video"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="has\nparte\ndel 5%\nque ha\ncambiado\nsu vida"
+                    android:textColor="@color/primary"
+                    android:textSize="42sp"
+                    android:gravity="end"
+                    android:lineSpacingMultiplier="0.7"
+                    android:fontFamily="@font/nico_moji_regular"
+                    android:shadowColor="#30004AAD"
+                    android:shadowDx="6"
+                    android:shadowDy="6"
+                    android:shadowRadius="1" />
+            </RelativeLayout>
+
+            <!-- Video 1: Tenis -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="24dp">
+
+                <FrameLayout
+                    android:id="@+id/container_tenis"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:background="@color/primary"
+                    android:padding="2dp">
+
+                    <VideoView
+                        android:id="@+id/video_view_tenis"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/img_placeholder_tenis"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/video1"
+                        android:scaleType="centerCrop" />
+
+                    <RelativeLayout
+                        android:id="@+id/controls_tenis"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/btn_play_tenis"
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            android:layout_centerInParent="true"
+                            android:src="@android:drawable/ic_media_play"
+                            app:tint="@color/primary"
+                            android:background="@drawable/footer_icon_bg"
+                            android:backgroundTint="@color/white"
+                            android:padding="15dp"
+                            android:elevation="4dp" />
+
+                        <ImageButton
+                            android:id="@+id/btn_rewind_tenis"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_centerVertical="true"
+                            android:layout_toStartOf="@id/btn_play_tenis"
+                            android:layout_marginEnd="20dp"
+                            android:src="@android:drawable/ic_media_rew"
+                            android:background="@android:color/transparent"
+                            app:tint="@color/white"
+                            android:visibility="gone" />
+
+                        <ImageButton
+                            android:id="@+id/btn_forward_tenis"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@id/btn_play_tenis"
+                            android:layout_marginStart="20dp"
+                            android:src="@android:drawable/ic_media_ff"
+                            android:background="@android:color/transparent"
+                            app:tint="@color/white"
+                            android:visibility="gone" />
+
+                        <SeekBar
+                            android:id="@+id/seekbar_tenis"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="12dp"
+                            android:layout_marginHorizontal="16dp"
+                            android:visibility="gone"
+                            android:progressTint="@color/white"
+                            android:thumbTint="@color/white" />
+                    </RelativeLayout>
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tenis: salud en cada golpe"
+                    android:background="#EBEDF2"
+                    android:padding="12dp"
+                    android:gravity="center"
+                    android:textSize="13sp"
+                    android:textColor="@color/primary"
+                    android:fontFamily="@font/nico_moji_regular" />
+            </LinearLayout>
+
+            <!-- Video 2: Futbol -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="24dp">
+
+                <FrameLayout
+                    android:id="@+id/container_futbol"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:background="@color/primary"
+                    android:padding="2dp">
+
+                    <VideoView
+                        android:id="@+id/video_view_futbol"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/img_placeholder_futbol"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/video2"
+                        android:scaleType="centerCrop" />
+
+                    <RelativeLayout
+                        android:id="@+id/controls_futbol"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/btn_play_futbol"
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            android:layout_centerInParent="true"
+                            android:src="@android:drawable/ic_media_play"
+                            app:tint="@color/primary"
+                            android:background="@drawable/footer_icon_bg"
+                            android:backgroundTint="@color/white"
+                            android:padding="15dp" />
+
+                        <ImageButton
+                            android:id="@+id/btn_rewind_futbol"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_centerVertical="true"
+                            android:layout_toStartOf="@id/btn_play_futbol"
+                            android:layout_marginEnd="20dp"
+                            android:src="@android:drawable/ic_media_rew"
+                            android:background="@android:color/transparent"
+                            app:tint="@color/white"
+                            android:visibility="gone" />
+
+                        <ImageButton
+                            android:id="@+id/btn_forward_futbol"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@id/btn_play_futbol"
+                            android:layout_marginStart="20dp"
+                            android:src="@android:drawable/ic_media_ff"
+                            android:background="@android:color/transparent"
+                            app:tint="@color/white"
+                            android:visibility="gone" />
+
+                        <SeekBar
+                            android:id="@+id/seekbar_futbol"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="12dp"
+                            android:layout_marginHorizontal="16dp"
+                            android:visibility="gone"
+                            android:progressTint="@color/white"
+                            android:thumbTint="@color/white" />
+                    </RelativeLayout>
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Fútbol: energía y bienestar"
+                    android:background="#EBEDF2"
+                    android:padding="12dp"
+                    android:gravity="center"
+                    android:textSize="13sp"
+                    android:textColor="@color/primary"
+                    android:fontFamily="@font/nico_moji_regular" />
+            </LinearLayout>
+
+            <!-- Video 3: Salud -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="30dp">
+
+                <FrameLayout
+                    android:id="@+id/container_salud"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:background="@color/primary"
+                    android:padding="2dp">
+
+                    <VideoView
+                        android:id="@+id/video_view_salud"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/img_placeholder_salud"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/video3"
+                        android:scaleType="centerCrop" />
+
+                    <RelativeLayout
+                        android:id="@+id/controls_salud"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/btn_play_salud"
+                            android:layout_width="65dp"
+                            android:layout_height="65dp"
+                            android:layout_centerInParent="true"
+                            android:src="@android:drawable/ic_media_play"
+                            app:tint="@color/primary"
+                            android:background="@drawable/footer_icon_bg"
+                            android:backgroundTint="@color/white"
+                            android:padding="15dp" />
+
+                        <ImageButton
+                            android:id="@+id/btn_rewind_salud"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_centerVertical="true"
+                            android:layout_toStartOf="@id/btn_play_salud"
+                            android:layout_marginEnd="20dp"
+                            android:src="@android:drawable/ic_media_rew"
+                            android:background="@android:color/transparent"
+                            app:tint="@color/white"
+                            android:visibility="gone" />
+
+                        <ImageButton
+                            android:id="@+id/btn_forward_salud"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@id/btn_play_salud"
+                            android:layout_marginStart="20dp"
+                            android:src="@android:drawable/ic_media_ff"
+                            android:background="@android:color/transparent"
+                            app:tint="@color/white"
+                            android:visibility="gone" />
+
+                        <SeekBar
+                            android:id="@+id/seekbar_salud"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="12dp"
+                            android:layout_marginHorizontal="16dp"
+                            android:visibility="gone"
+                            android:progressTint="@color/white"
+                            android:thumbTint="@color/white" />
+                    </RelativeLayout>
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Activa tu salud explorando"
+                    android:background="#EBEDF2"
+                    android:padding="12dp"
+                    android:gravity="center"
+                    android:textSize="13sp"
+                    android:textColor="@color/primary"
+                    android:fontFamily="@font/nico_moji_regular" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingVertical="16dp"
+                android:text="@string/email_subrayado"
+                android:textColor="@color/primary"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- FOOTER -->
+    <LinearLayout
+        android:id="@+id/footer_video"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/surface"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:elevation="8dp">
+
+        <ImageButton
+            android:id="@+id/foot_profile"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="8dp"
+            android:background="@drawable/footer_icon_bg"
+            android:padding="12dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/perfil"
+            app:tint="@color/white" />
+
+        <ImageButton
+            android:id="@+id/foot_photos"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="8dp"
+            android:background="@drawable/footer_icon_bg"
+            android:padding="12dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/photo"
+            app:tint="@color/white" />
+
+        <ImageButton
+            android:id="@+id/foot_web"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="8dp"
+            android:background="@drawable/footer_icon_bg"
+            android:padding="12dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/web"
+            app:tint="@color/white" />
+
+        <ImageButton
+            android:id="@+id/foot_buttons"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="8dp"
+            android:background="@drawable/footer_icon_bg"
+            android:padding="12dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/buttons"
+            app:tint="@color/white" />
+
+    </LinearLayout>
+
+</RelativeLayout>

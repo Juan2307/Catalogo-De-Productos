@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <!-- Colores Principales -->
+    <color name="primary">#004AAD</color>
+    <color name="primary_light">#1A5BB5</color>
+
+    <!-- Colores de Acento y Estado -->
+    <color name="accent_green">#4CAF50</color>
+    <color name="overlay_dark">#20000000</color>
+
+    <!-- Colores de Superficie y Texto -->
+    <color name="background">#F6F7FB</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="surface_variant">#EBEDF2</color>
+
+    <color name="text_primary">#333333</color>
+    <color name="text_hint">#BCBCBC</color>
+
+    <!-- Colores Base -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
 </resources>
