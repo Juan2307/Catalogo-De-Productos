@@ -19,8 +19,7 @@
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:scaleType="fitCenter"
-            android:src="@drawable/logos"
-            app:tint="@color/white" />
+            android:src="@drawable/logos"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -139,8 +138,7 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:src="@drawable/logos"
-            android:scaleType="fitCenter"
-            app:tint="@color/white" />
+            android:scaleType="fitCenter"/>
 
         <TextView
             android:layout_width="wrap_content"
