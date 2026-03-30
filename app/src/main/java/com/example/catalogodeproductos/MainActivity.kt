@@ -67,6 +67,10 @@ class MainActivity : AppCompatActivity(), MenuFragment.OnOptionClickListener {
             setReorderingAllowed(true)
         }
 
+        // Actualizar el resaltado en el MenuFragment
+        val menuFragment = supportFragmentManager.findFragmentById(R.id.menu_fragment_container) as? MenuFragment
+        menuFragment?.highlightOption(option)
+
         // Cerrar el menú lateral después de seleccionar
         if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
             drawerLayout.closeDrawer(GravityCompat.START)
