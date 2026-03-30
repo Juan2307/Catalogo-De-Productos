@@ -10,30 +10,24 @@ import android.webkit.WebView
 import android.webkit.WebViewClient
 import android.widget.Button
 import android.widget.EditText
-import android.widget.ImageButton
 import android.widget.TextView
-import androidx.fragment.app.Fragment
 
-class WebFragment : Fragment(R.layout.fragment_web) {
+class WebFragment : BaseFragment(R.layout.fragment_web) {
 
     @SuppressLint("ClickableViewAccessibility")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val listener = activity as? MenuFragment.OnOptionClickListener
-
-        // Navegación Footer (Solo los 4 iconos solicitados: Perfil, Foto, Video y Botones)
-        view.findViewById<ImageButton>(R.id.foot_profile)?.setOnClickListener { listener?.onOptionClicked("profile") }
-        view.findViewById<ImageButton>(R.id.foot_photos)?.setOnClickListener { listener?.onOptionClicked("photos") }
-        view.findViewById<ImageButton>(R.id.foot_video)?.setOnClickListener { listener?.onOptionClicked("video") }
-        view.findViewById<ImageButton>(R.id.foot_buttons)?.setOnClickListener { listener?.onOptionClicked("buttons") }
-
-        // Configuración WebView Dinámico
         val webView = view.findViewById<WebView>(R.id.webView)
         val etUrl = view.findViewById<EditText>(R.id.et_url)
         val tvBrowserTitle = view.findViewById<TextView>(R.id.tv_browser_title)
 
-        // SOLUCIÓN AL SCROLL: Evitar que el ScrollView principal intercepte los gestos del WebView
+        setupWebView(webView, tvBrowserTitle)
+        setupControls(view, webView, etUrl)
+    }
+
+    @SuppressLint("ClickableViewAccessibility")
+    private fun setupWebView(webView: WebView, tvBrowserTitle: TextView?) {
         webView.setOnTouchListener { v, event ->
             if (event.action == MotionEvent.ACTION_MOVE) {
                 v.parent.requestDisallowInterceptTouchEvent(true)
@@ -42,30 +36,34 @@ class WebFragment : Fragment(R.layout.fragment_web) {
         }
 
         webView.webViewClient = object : WebViewClient() {
-            override fun shouldOverrideUrlLoading(view: WebView?, request: WebResourceRequest?): Boolean {
+            override fun shouldOverrideUrlLoading(
+                view: WebView?,
+                request: WebResourceRequest?
+            ): Boolean {
                 val url = request?.url.toString()
-                // Permitir solo http y https, bloquear otros esquemas que causan crash
                 return if (url.startsWith("http://") || url.startsWith("https://")) {
-                    false // WebView maneja la carga
+                    false
                 } else {
-                    true // Bloquear esquemas desconocidos (whatsapp, intents, etc)
+                    true
                 }
             }
 
             override fun onPageFinished(view: WebView?, url: String?) {
                 super.onPageFinished(view, url)
-                // Actualizar la barra cuando el usuario navegue internamente
                 tvBrowserTitle?.text = url?.removePrefix("https://")?.removePrefix("http://")
             }
         }
 
-        webView.settings.javaScriptEnabled = true
-        webView.settings.domStorageEnabled = true
-        webView.settings.cacheMode = WebSettings.LOAD_DEFAULT
+        webView.settings.apply {
+            javaScriptEnabled = true
+            domStorageEnabled = true
+            cacheMode = WebSettings.LOAD_DEFAULT
+        }
 
         webView.loadUrl("https://www.sportpoli.com")
+    }
 
-        // Botón Ir
+    private fun setupControls(view: View, webView: WebView, etUrl: EditText) {
         view.findViewById<Button>(R.id.btn_go)?.setOnClickListener {
             var urlInput = etUrl.text.toString().trim()
             if (urlInput.isNotEmpty()) {
@@ -74,8 +72,10 @@ class WebFragment : Fragment(R.layout.fragment_web) {
             }
         }
 
-        view.findViewById<Button>(R.id.btn_back)?.setOnClickListener { if (webView.canGoBack()) webView.goBack() }
-        view.findViewById<Button>(R.id.btn_forward)?.setOnClickListener { if (webView.canGoForward()) webView.goForward() }
+        view.findViewById<Button>(R.id.btn_back)
+            ?.setOnClickListener { if (webView.canGoBack()) webView.goBack() }
+        view.findViewById<Button>(R.id.btn_forward)
+            ?.setOnClickListener { if (webView.canGoForward()) webView.goForward() }
         view.findViewById<Button>(R.id.btn_refresh)?.setOnClickListener { webView.reload() }
     }
 }

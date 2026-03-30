@@ -2,32 +2,30 @@ package com.example.catalogodeproductos
 
 import android.net.Uri
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.view.View
 import android.widget.ImageButton
 import android.widget.ImageView
+import android.widget.SeekBar
 import android.widget.VideoView
-import androidx.fragment.app.Fragment
 
-class VideoFragment : Fragment(R.layout.fragment_video) {
+class VideoFragment : BaseFragment(R.layout.fragment_video) {
+
+    private val handler = Handler(Looper.getMainLooper())
+    private val runnableMap = mutableMapOf<Int, Runnable>()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val listener = activity as? MenuFragment.OnOptionClickListener
-
-        // Navegación del Footer
-        view.findViewById<ImageButton>(R.id.foot_profile).setOnClickListener { listener?.onOptionClicked("profile") }
-        view.findViewById<ImageButton>(R.id.foot_photos).setOnClickListener { listener?.onOptionClicked("photos") }
-        view.findViewById<ImageButton>(R.id.foot_web).setOnClickListener { listener?.onOptionClicked("web") }
-        view.findViewById<ImageButton>(R.id.foot_buttons).setOnClickListener { listener?.onOptionClicked("buttons") }
-
-        // Configuración de Videos con Controles Personalizados (Saltos de 10s)
+        // Configuración de Videos con Controles Personalizados
         setupCustomVideoControls(
             view.findViewById(R.id.video_view_tenis),
             view.findViewById(R.id.img_placeholder_tenis),
             view.findViewById(R.id.btn_play_tenis),
             view.findViewById(R.id.btn_rewind_tenis),
             view.findViewById(R.id.btn_forward_tenis),
+            view.findViewById(R.id.seekbar_tenis),
             "tenis"
         )
 
@@ -37,6 +35,7 @@ class VideoFragment : Fragment(R.layout.fragment_video) {
             view.findViewById(R.id.btn_play_futbol),
             view.findViewById(R.id.btn_rewind_futbol),
             view.findViewById(R.id.btn_forward_futbol),
+            view.findViewById(R.id.seekbar_futbol),
             "futbol"
         )
 
@@ -46,6 +45,7 @@ class VideoFragment : Fragment(R.layout.fragment_video) {
             view.findViewById(R.id.btn_play_salud),
             view.findViewById(R.id.btn_rewind_salud),
             view.findViewById(R.id.btn_forward_salud),
+            view.findViewById(R.id.seekbar_salud),
             "salud"
         )
     }
@@ -56,6 +56,7 @@ class VideoFragment : Fragment(R.layout.fragment_video) {
         btnPlay: ImageView,
         btnRewind: ImageButton,
         btnForward: ImageButton,
+        seekBar: SeekBar,
         fileName: String
     ) {
         val packageName = requireContext().packageName
@@ -65,40 +66,73 @@ class VideoFragment : Fragment(R.layout.fragment_video) {
             val uri = Uri.parse("android.resource://$packageName/$videoResId")
             videoView.setVideoURI(uri)
 
-            // Acción de Play / Pause
+            videoView.setOnPreparedListener { mp ->
+                seekBar.max = videoView.duration
+            }
+
+            val updateSeekBar = object : Runnable {
+                override fun run() {
+                    if (videoView.isPlaying) {
+                        seekBar.progress = videoView.currentPosition
+                    }
+                    handler.postDelayed(this, 1000)
+                }
+            }
+            runnableMap[videoView.id] = updateSeekBar
+
             btnPlay.setOnClickListener {
                 if (videoView.isPlaying) {
                     videoView.pause()
                     btnPlay.setImageResource(android.R.drawable.ic_media_play)
+                    handler.removeCallbacks(updateSeekBar)
                 } else {
                     if (placeholder.visibility == View.VISIBLE) {
                         placeholder.visibility = View.GONE
                         videoView.visibility = View.VISIBLE
                         btnRewind.visibility = View.VISIBLE
                         btnForward.visibility = View.VISIBLE
+                        seekBar.visibility = View.VISIBLE
                     }
                     videoView.start()
                     btnPlay.setImageResource(android.R.drawable.ic_media_pause)
+                    handler.post(updateSeekBar)
                 }
             }
 
-            // Adelantar 10 segundos
             btnForward.setOnClickListener {
-                val currentPos = videoView.currentPosition
-                videoView.seekTo(currentPos + 10000)
+                videoView.seekTo(videoView.currentPosition + 10000)
+                seekBar.progress = videoView.currentPosition
             }
 
-            // Retroceder 10 segundos
             btnRewind.setOnClickListener {
-                val currentPos = videoView.currentPosition
-                val newPos = if (currentPos - 10000 < 0) 0 else currentPos - 10000
+                val newPos = (videoView.currentPosition - 10000).coerceAtLeast(0)
                 videoView.seekTo(newPos)
+                seekBar.progress = videoView.currentPosition
             }
 
-            // Al terminar el video
+            seekBar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+                override fun onProgressChanged(
+                    seekBar: SeekBar?,
+                    progress: Int,
+                    fromUser: Boolean
+                ) {
+                    if (fromUser) videoView.seekTo(progress)
+                }
+
+                override fun onStartTrackingTouch(seekBar: SeekBar?) {}
+                override fun onStopTrackingTouch(seekBar: SeekBar?) {}
+            })
+
             videoView.setOnCompletionListener {
                 btnPlay.setImageResource(android.R.drawable.ic_media_play)
+                seekBar.progress = 0
+                handler.removeCallbacks(updateSeekBar)
             }
         }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        handler.removeCallbacksAndMessages(null)
     }
 }

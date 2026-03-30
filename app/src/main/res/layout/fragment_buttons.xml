@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background_gray">
+    android:background="@color/background">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -17,13 +17,16 @@
             android:orientation="vertical"
             android:padding="16dp">
 
+            <!-- Breadcrumb -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Modulo Botones"
-                android:textColor="#CCCCCC"
+                android:textColor="@color/text_hint"
                 android:textSize="14sp"
-                android:layout_marginBottom="10dp"/>
+                android:layout_margin="16dp"
+                android:fontFamily="@font/nico_moji_regular" />
+
 
             <!-- Botón SUPPORT -->
             <Button
@@ -34,13 +37,13 @@
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:textColor="@color/white"
-                android:backgroundTint="@color/sport_blue"
+                android:backgroundTint="@color/primary"
                 android:drawableStart="@android:drawable/stat_sys_phone_call"
                 android:drawablePadding="10dp"
                 android:paddingStart="20dp"
                 android:layout_marginBottom="12dp"
                 app:cornerRadius="30dp"
-                android:elevation="4dp"/>
+                android:elevation="4dp" />
 
             <!-- Botón CATALOGO -->
             <Button
@@ -51,13 +54,13 @@
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:textColor="@color/white"
-                android:backgroundTint="@color/sport_blue"
+                android:backgroundTint="@color/primary"
                 android:drawableStart="@android:drawable/stat_sys_download"
                 android:drawablePadding="10dp"
                 android:paddingStart="20dp"
                 android:layout_marginBottom="16dp"
                 app:cornerRadius="30dp"
-                android:elevation="4dp"/>
+                android:elevation="4dp" />
 
             <!-- Imagen Principal -->
             <androidx.cardview.widget.CardView
@@ -66,6 +69,7 @@
                 app:cardCornerRadius="0dp"
                 app:cardElevation="4dp"
                 android:layout_marginBottom="0dp">
+
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -77,9 +81,10 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/sport_blue"
+                android:background="@color/primary"
                 android:padding="24dp"
                 android:orientation="vertical">
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -92,77 +97,78 @@
                     android:shadowColor="#40000000"
                     android:shadowDx="2"
                     android:shadowDy="2"
-                    android:shadowRadius="2"/>
+                    android:shadowRadius="2" />
             </LinearLayout>
 
-            <!-- Email Link -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="sportpoli@corporative.com"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                android:textColor="@color/sport_blue"
                 android:gravity="center"
-                android:paddingVertical="20dp" />
+                android:paddingVertical="16dp"
+                android:text="@string/email_subrayado"
+                android:textColor="@color/primary"
+                android:textSize="17sp"
+                android:textStyle="bold" />
 
         </LinearLayout>
+
     </ScrollView>
 
-    <!-- FOOTER CIRCULAR (PERFIL, FOTOS, VIDEO, WEB) -->
+    <!-- FOOTER -->
     <LinearLayout
         android:id="@+id/footer_buttons_layout"
         android:layout_width="match_parent"
-        android:layout_height="85dp"
+        android:layout_height="80dp"
         android:layout_alignParentBottom="true"
-        android:background="@color/white"
-        android:elevation="12dp"
+        android:background="@color/surface"
         android:gravity="center"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:elevation="8dp">
 
         <ImageButton
             android:id="@+id/foot_profile"
-            android:layout_width="56dp"
-            android:layout_height="56dp"
-            android:layout_marginHorizontal="10dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="8dp"
             android:background="@drawable/footer_icon_bg"
-            android:padding="14dp"
+            android:padding="12dp"
             android:scaleType="fitCenter"
             android:src="@drawable/perfil"
             app:tint="@color/white" />
 
         <ImageButton
             android:id="@+id/foot_photos"
-            android:layout_width="56dp"
-            android:layout_height="56dp"
-            android:layout_marginHorizontal="10dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="8dp"
             android:background="@drawable/footer_icon_bg"
-            android:padding="16dp"
+            android:padding="12dp"
             android:scaleType="fitCenter"
             android:src="@drawable/photo"
             app:tint="@color/white" />
 
         <ImageButton
             android:id="@+id/foot_video"
-            android:layout_width="56dp"
-            android:layout_height="56dp"
-            android:layout_marginHorizontal="10dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="8dp"
             android:background="@drawable/footer_icon_bg"
-            android:padding="16dp"
+            android:padding="12dp"
             android:scaleType="fitCenter"
             android:src="@drawable/video"
             app:tint="@color/white" />
 
         <ImageButton
             android:id="@+id/foot_web"
-            android:layout_width="56dp"
-            android:layout_height="56dp"
-            android:layout_marginHorizontal="10dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="8dp"
             android:background="@drawable/footer_icon_bg"
-            android:padding="16dp"
+            android:padding="12dp"
             android:scaleType="fitCenter"
             android:src="@drawable/web"
             app:tint="@color/white" />
+
     </LinearLayout>
 
 </RelativeLayout>

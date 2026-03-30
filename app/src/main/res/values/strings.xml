@@ -2,4 +2,5 @@
     <string name="app_name">Catalogo De Productos</string>
     <string name="navigation_drawer_open">Abrir menú</string>
     <string name="navigation_drawer_close">Cerrar menú</string>
+    <string name="email_subrayado"><u>sportpoli@corporative.com</u></string>
 </resources>

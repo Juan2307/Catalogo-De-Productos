@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background_gray">
+    android:background="@color/background">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -17,57 +17,80 @@
             android:orientation="vertical"
             android:padding="16dp">
 
+            <!-- Breadcrumb -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:fontFamily="@font/nico_moji_regular"
                 android:text="Modulo Fotos"
-                android:textColor="#CCCCCC"
-                android:textSize="14sp"
-                android:layout_marginBottom="8dp"/>
+                android:textColor="@color/text_hint"
+                android:textSize="14sp" />
 
-            <!-- Header Image with Text -->
+            <!-- Header Image with Text (Optimized for mockup) -->
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="240dp"
-                android:layout_marginBottom="16dp">
+                android:layout_height="wrap_content">
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/portada_fondo" />
+                    android:scaleType="fitXY"
+                    android:src="@drawable/fondo_fotos" />
+
+                <!-- Logo sutil en la esquina si es necesario (opcional) -->
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_margin="12dp"
+                    android:alpha="0.8"
+                    android:src="@drawable/logos" />
 
                 <TextView
-                    android:layout_width="220dp"
+                    style="@style/ProfileInfoLabel"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="40dp"
+                    android:fontFamily="@font/nico_moji_regular"
                     android:gravity="center"
-                    android:text="todo lo que necesitas en un solo lugar"
-                    android:textColor="@color/sport_blue"
-                    android:textSize="28sp"
-                    android:textStyle="bold"
+                    android:lineSpacingMultiplier="0.7"
                     android:shadowColor="@color/white"
                     android:shadowDx="2"
                     android:shadowDy="2"
-                    android:shadowRadius="1" />
+                    android:shadowRadius="1"
+                    android:text="todo lo que necesitas en un solo lugar"
+                    android:textColor="@color/primary"
+                    android:textSize="28sp"
+                    android:textStyle="bold" />
 
             </RelativeLayout>
 
             <TextView
-                android:layout_width="wrap_content"
+                style="@style/ProfileInfoLabel"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/nico_moji_regular"
+                android:gravity="center"
+                android:lineSpacingMultiplier="0.7"
+                android:shadowColor="#30004AAD"
+                android:shadowDx="6"
+                android:shadowDy="6"
+                android:shadowRadius="1"
                 android:text="Productos"
-                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:textSize="22sp"
                 android:textStyle="bold"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="20dp"
-                android:textColor="#333333" />
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp" />
 
             <GridLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:alignmentMode="alignMargins"
                 android:columnCount="2"
-                android:alignmentMode="alignMargins">
+                android:paddingHorizontal="8dp">
 
                 <!-- Producto 1 -->
                 <androidx.cardview.widget.CardView
@@ -75,9 +98,9 @@
                     android:layout_height="wrap_content"
                     android:layout_columnWeight="1"
                     android:layout_margin="8dp"
-                    app:cardCornerRadius="16dp"
-                    app:cardBackgroundColor="@color/sport_blue"
-                    app:cardElevation="6dp">
+                    app:cardBackgroundColor="@color/primary"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="4dp">
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -85,9 +108,8 @@
                         android:padding="12dp">
 
                         <ImageView
-                            android:id="@+id/cart1"
-                            android:layout_width="24dp"
-                            android:layout_height="24dp"
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
                             android:layout_alignParentEnd="true"
                             android:src="@drawable/shopping_cart"
                             app:tint="@color/white" />
@@ -95,16 +117,18 @@
                         <androidx.cardview.widget.CardView
                             android:id="@+id/img_container1"
                             android:layout_width="match_parent"
-                            android:layout_height="120dp"
-                            android:layout_below="@id/cart1"
-                            android:layout_marginTop="8dp"
-                            app:cardCornerRadius="8dp">
+                            android:layout_height="130dp"
+                            android:layout_marginTop="28dp"
+                            app:cardBackgroundColor="@color/white"
+                            app:cardCornerRadius="12dp"
+                            app:cardElevation="0dp">
+
                             <ImageView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:src="@drawable/producto1"
-                                android:scaleType="centerInside"
-                                android:padding="8dp"/>
+                                android:padding="10dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/producto1" />
                         </androidx.cardview.widget.CardView>
 
                         <TextView
@@ -113,21 +137,22 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/img_container1"
                             android:layout_marginTop="12dp"
+                            android:fontFamily="@font/nico_moji_regular"
+                            android:gravity="center"
                             android:text="chaqueta\npuller\nadidas"
                             android:textColor="@color/white"
-                            android:textSize="12sp"
-                            android:gravity="center"
-                            android:textStyle="bold" />
+                            android:textSize="11sp" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_below="@id/title1"
+                            android:layout_marginTop="4dp"
+                            android:fontFamily="@font/nico_moji_regular"
+                            android:gravity="center"
                             android:text="$325.000"
                             android:textColor="@color/white"
-                            android:textSize="14sp"
-                            android:gravity="center"
-                            android:textStyle="bold" />
+                            android:textSize="12sp" />
 
                     </RelativeLayout>
 
@@ -139,9 +164,9 @@
                     android:layout_height="wrap_content"
                     android:layout_columnWeight="1"
                     android:layout_margin="8dp"
-                    app:cardCornerRadius="16dp"
-                    app:cardBackgroundColor="@color/sport_blue"
-                    app:cardElevation="6dp">
+                    app:cardBackgroundColor="@color/primary"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="4dp">
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -149,9 +174,8 @@
                         android:padding="12dp">
 
                         <ImageView
-                            android:id="@+id/cart2"
-                            android:layout_width="24dp"
-                            android:layout_height="24dp"
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
                             android:layout_alignParentEnd="true"
                             android:src="@drawable/shopping_cart"
                             app:tint="@color/white" />
@@ -159,16 +183,18 @@
                         <androidx.cardview.widget.CardView
                             android:id="@+id/img_container2"
                             android:layout_width="match_parent"
-                            android:layout_height="120dp"
-                            android:layout_below="@id/cart2"
-                            android:layout_marginTop="8dp"
-                            app:cardCornerRadius="8dp">
+                            android:layout_height="130dp"
+                            android:layout_marginTop="28dp"
+                            app:cardBackgroundColor="@color/white"
+                            app:cardCornerRadius="12dp"
+                            app:cardElevation="0dp">
+
                             <ImageView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:src="@drawable/producto2"
-                                android:scaleType="centerInside"
-                                android:padding="8dp"/>
+                                android:padding="10dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/producto2" />
                         </androidx.cardview.widget.CardView>
 
                         <TextView
@@ -177,21 +203,22 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/img_container2"
                             android:layout_marginTop="12dp"
+                            android:fontFamily="@font/nico_moji_regular"
+                            android:gravity="center"
                             android:text="guayos\npuma\npredator"
                             android:textColor="@color/white"
-                            android:textSize="12sp"
-                            android:gravity="center"
-                            android:textStyle="bold" />
+                            android:textSize="11sp" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_below="@id/title2"
+                            android:layout_marginTop="4dp"
+                            android:fontFamily="@font/nico_moji_regular"
+                            android:gravity="center"
                             android:text="$740.000"
                             android:textColor="@color/white"
-                            android:textSize="14sp"
-                            android:gravity="center"
-                            android:textStyle="bold" />
+                            android:textSize="12sp" />
                     </RelativeLayout>
 
                 </androidx.cardview.widget.CardView>
@@ -202,9 +229,9 @@
                     android:layout_height="wrap_content"
                     android:layout_columnWeight="1"
                     android:layout_margin="8dp"
-                    app:cardCornerRadius="16dp"
-                    app:cardBackgroundColor="@color/sport_blue"
-                    app:cardElevation="6dp">
+                    app:cardBackgroundColor="@color/primary"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="4dp">
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -212,9 +239,8 @@
                         android:padding="12dp">
 
                         <ImageView
-                            android:id="@+id/cart3"
-                            android:layout_width="24dp"
-                            android:layout_height="24dp"
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
                             android:layout_alignParentEnd="true"
                             android:src="@drawable/shopping_cart"
                             app:tint="@color/white" />
@@ -222,18 +248,18 @@
                         <androidx.cardview.widget.CardView
                             android:id="@+id/img_container3"
                             android:layout_width="match_parent"
-                            android:layout_height="120dp"
-                            android:layout_below="@id/cart3"
-                            android:layout_marginTop="8dp"
-                            app:cardCornerRadius="8dp">
+                            android:layout_height="130dp"
+                            android:layout_marginTop="28dp"
+                            app:cardBackgroundColor="@color/white"
+                            app:cardCornerRadius="12dp"
+                            app:cardElevation="0dp">
 
                             <ImageView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:src="@drawable/producto3"
-                                android:scaleType="centerInside"
-                                android:padding="8dp"/>
-
+                                android:padding="10dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/producto3" />
                         </androidx.cardview.widget.CardView>
 
                         <TextView
@@ -242,21 +268,22 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/img_container3"
                             android:layout_marginTop="12dp"
+                            android:fontFamily="@font/nico_moji_regular"
+                            android:gravity="center"
                             android:text="snowboard\ning board\nfox"
                             android:textColor="@color/white"
-                            android:textSize="12sp"
-                            android:gravity="center"
-                            android:textStyle="bold" />
+                            android:textSize="11sp" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_below="@id/title3"
+                            android:layout_marginTop="4dp"
+                            android:fontFamily="@font/nico_moji_regular"
+                            android:gravity="center"
                             android:text="$1’200.000"
                             android:textColor="@color/white"
-                            android:textSize="14sp"
-                            android:gravity="center"
-                            android:textStyle="bold" />
+                            android:textSize="12sp" />
 
                     </RelativeLayout>
 
@@ -268,9 +295,9 @@
                     android:layout_height="wrap_content"
                     android:layout_columnWeight="1"
                     android:layout_margin="8dp"
-                    app:cardCornerRadius="16dp"
-                    app:cardBackgroundColor="@color/sport_blue"
-                    app:cardElevation="6dp">
+                    app:cardBackgroundColor="@color/primary"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="4dp">
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -278,9 +305,8 @@
                         android:padding="12dp">
 
                         <ImageView
-                            android:id="@+id/cart4"
-                            android:layout_width="24dp"
-                            android:layout_height="24dp"
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
                             android:layout_alignParentEnd="true"
                             android:src="@drawable/shopping_cart"
                             app:tint="@color/white" />
@@ -288,18 +314,18 @@
                         <androidx.cardview.widget.CardView
                             android:id="@+id/img_container4"
                             android:layout_width="match_parent"
-                            android:layout_height="120dp"
-                            android:layout_below="@id/cart4"
-                            android:layout_marginTop="8dp"
-                            app:cardCornerRadius="8dp">
+                            android:layout_height="130dp"
+                            android:layout_marginTop="28dp"
+                            app:cardBackgroundColor="@color/white"
+                            app:cardCornerRadius="12dp"
+                            app:cardElevation="0dp">
 
                             <ImageView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:src="@drawable/producto4"
-                                android:scaleType="centerInside"
-                                android:padding="8dp"/>
-
+                                android:padding="10dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/producto4" />
                         </androidx.cardview.widget.CardView>
 
                         <TextView
@@ -308,21 +334,22 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/img_container4"
                             android:layout_marginTop="12dp"
+                            android:fontFamily="@font/nico_moji_regular"
+                            android:gravity="center"
                             android:text="raqueta\ndull wilson"
                             android:textColor="@color/white"
-                            android:textSize="12sp"
-                            android:gravity="center"
-                            android:textStyle="bold" />
+                            android:textSize="11sp" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_below="@id/title4"
+                            android:layout_marginTop="4dp"
+                            android:fontFamily="@font/nico_moji_regular"
+                            android:gravity="center"
                             android:text="$630.000"
                             android:textColor="@color/white"
-                            android:textSize="14sp"
-                            android:gravity="center"
-                            android:textStyle="bold" />
+                            android:textSize="12sp" />
 
                     </RelativeLayout>
 
@@ -333,34 +360,33 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="sportpoli@corporative.com"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                android:textColor="@color/sport_blue"
                 android:gravity="center"
-                android:layout_marginTop="30dp"
-                android:layout_marginBottom="20dp" />
+                android:paddingVertical="16dp"
+                android:text="@string/email_subrayado"
+                android:textColor="@color/primary"
+                android:textSize="17sp"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
     </ScrollView>
 
-    <!-- FOOTER CIRCULAR HD -->
+    <!-- FOOTER -->
     <LinearLayout
         android:id="@+id/footer_photos"
         android:layout_width="match_parent"
-        android:layout_height="85dp"
+        android:layout_height="80dp"
         android:layout_alignParentBottom="true"
-        android:background="@color/white"
-        android:elevation="12dp"
+        android:background="@color/surface"
+        android:elevation="8dp"
         android:gravity="center"
         android:orientation="horizontal">
 
         <ImageButton
             android:id="@+id/foot_profile"
-            android:layout_width="56dp"
-            android:layout_height="56dp"
-            android:layout_marginHorizontal="10dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="8dp"
             android:background="@drawable/footer_icon_bg"
             android:padding="12dp"
             android:scaleType="fitCenter"
@@ -369,36 +395,37 @@
 
         <ImageButton
             android:id="@+id/foot_video"
-            android:layout_width="56dp"
-            android:layout_height="56dp"
-            android:layout_marginHorizontal="10dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="8dp"
             android:background="@drawable/footer_icon_bg"
-            android:padding="16dp"
+            android:padding="12dp"
             android:scaleType="fitCenter"
             android:src="@drawable/video"
             app:tint="@color/white" />
 
         <ImageButton
             android:id="@+id/foot_web"
-            android:layout_width="56dp"
-            android:layout_height="56dp"
-            android:layout_marginHorizontal="10dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="8dp"
             android:background="@drawable/footer_icon_bg"
-            android:padding="16dp"
+            android:padding="12dp"
             android:scaleType="fitCenter"
             android:src="@drawable/web"
             app:tint="@color/white" />
 
         <ImageButton
             android:id="@+id/foot_buttons"
-            android:layout_width="56dp"
-            android:layout_height="56dp"
-            android:layout_marginHorizontal="10dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="8dp"
             android:background="@drawable/footer_icon_bg"
-            android:padding="16dp"
+            android:padding="12dp"
             android:scaleType="fitCenter"
             android:src="@drawable/buttons"
             app:tint="@color/white" />
+
     </LinearLayout>
 
 </RelativeLayout>
