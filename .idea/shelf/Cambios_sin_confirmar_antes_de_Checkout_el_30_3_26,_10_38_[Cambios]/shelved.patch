@@ -1,0 +1,50 @@
+Index: app/src/main/res/values/strings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><resources>\r\n    <!-- ================= NOMBRE Y FRASE ================= -->\r\n    <!-- Nombre y Frase (imagen) -->\r\n    <string name=\"desc_portada\">Imagen de portada</string>\r\n    <string name=\"desc_foto_perfil\">Foto de perfil</string>\r\n\r\n    <!-- Nombre y Frase (texto) -->\r\n    <string name=\"nombre_usuario\">Ana Lorena Guevara</string>\r\n    <string name=\"frase_usuario\">TRABAJA DURO Y DEJA QUE EL EXITO SEA EL QUE HAGA EL RUIDO</string>\r\n\r\n\r\n    <!-- ================= INFORMACIÓN PERSONAL ================= -->\r\n    <!-- información personal (texto) -->\r\n    <string name=\"info_personal\">Información Personal</string>\r\n    <string name=\"edad\">Edad</string>\r\n    <string name=\"peso\">Peso</string>\r\n    <string name=\"estatura\">Estatura</string>\r\n    <string name=\"imc\">IMC</string>\r\n\r\n    <!-- Valores (texto) -->\r\n    <string name=\"edad_numero\">28 años</string>\r\n    <string name=\"peso_numero\">72 kg</string>\r\n    <string name=\"estatura_numero\">1.72 m</string>\r\n    <string name=\"imc_numero\">23.5 (Normal)</string>\r\n\r\n\r\n    <!-- ================= SECCION MOTIVACIONAL ================= -->\r\n    <!-- Motivacion (imagen) -->\r\n    <string name=\"desc_gym\">Imagen motivacional de gimnasio</string>\r\n\r\n    <!-- Motivacion (texto) -->\r\n    <string name=\"frase_gym\">Encuentra tu límite con nosotros</string>\r\n\r\n\r\n    <!-- ================= CONTACTO ================= -->\r\n    <!-- Contacto (texto) -->\r\n    <string name=\"contacto\">sportpoli@corporative.com</string>\r\n\r\n\r\n    <!-- ================= LOGO ================= -->\r\n    <!-- Logo (imagen) -->\r\n    <string name=\"desc_logo\">Imagen logo</string>\r\n\r\n\r\n    <!-- ================= MENU ================= -->\r\n    <!-- Menu (imágen) -->\r\n    <string name=\"desc_menu\">Imagen menu</string>\r\n    <string name=\"desc_perfil\">Imagen fotos</string>\r\n    <string name=\"desc_fotos\">Imagen fotos</string>\r\n    <string name=\"desc_videos\">Imagen videos</string>\r\n    <string name=\"desc_web\">Imagen web</string>\r\n    <string name=\"desc_botones\">Imagen botones</string>\r\n\r\n    <!-- Menu (texto) -->\r\n    <string name=\"perfil\">Perfil</string>\r\n    <string name=\"fotos\">Fotos</string>\r\n    <string name=\"videos\">Videos</string>\r\n    <string name=\"web\">Web</string>\r\n    <string name=\"boton\">Botones</string>\r\n\r\n    <!-- ================= BOTONES ================= -->\r\n    <!-- Botones (imágen) -->\r\n    <string name=\"desc_btn_menu\">Imagen boton menu</string>\r\n    <string name=\"desc_btn_perfil\">Imagen boton fotos</string>\r\n    <string name=\"desc_btn_fotos\">Imagen boton fotos</string>\r\n    <string name=\"desc_btn_videos\">Imagen boton videos</string>\r\n    <string name=\"desc_btn_web\">Imagen boton web</string>\r\n    <string name=\"desc_btn_botones\">Imagen boton botones</string>\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n    <!-- ================= FOTOS ================= -->\r\n    <!-- Fondo (imágen) -->\r\n    <string name=\"desc_fondo\">Imagen de portada</string>\r\n\r\n    <!-- Nombre y Frase (texto) -->\r\n    <string name=\"fondo_fotos\">Todo lo que necesitas en un solo lugar\"</string>\r\n\r\n    <!-- ================= PRODUCTOS ================= -->\r\n    <!-- Carrito (imágen) -->\r\n    <string name=\"desc_carrito\">Imagen de carrito</string>\r\n\r\n    <!-- Productos (imágen) -->\r\n    <string name=\"desc_producto1\">Imagen de producto 1</string>\r\n    <string name=\"desc_producto2\">Imagen de producto 2</string>\r\n    <string name=\"desc_producto3\">Imagen de producto 3</string>\r\n    <string name=\"desc_producto4\">Imagen de producto 4</string>\r\n\r\n    <!-- Productos (texto) -->\r\n    <string name=\"productos\">Productos</string>\r\n    <string name=\"producto1\">Chaqueta Puller Adidas</string>\r\n    <string name=\"producto2\">Guayos Puma Predator</string>\r\n    <string name=\"producto3\">Snowboarding Board Fox</string>\r\n    <string name=\"producto4\">Raqueta Dull Wilson</string>\r\n\r\n    <!-- Productos Valor (texto) -->\r\n    <string name=\"val_producto1\">$325.000</string>\r\n    <string name=\"val_producto2\">$740.000</string>\r\n    <string name=\"val_producto3\">$1’200.000</string>\r\n    <string name=\"val_producto4\">$630.000</string>\r\n\r\n\r\n\r\n\r\n\r\n</resources>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/values/strings.xml b/app/src/main/res/values/strings.xml
+--- a/app/src/main/res/values/strings.xml	(revision 66b9bd1de8e910df7848de5df1d90d8ffef4ac3f)
++++ b/app/src/main/res/values/strings.xml	(date 1774884000771)
+@@ -111,6 +111,7 @@
+ 
+ 
+ 
++    <string name="app_name">Catalogo de productos</string>
+ 
+ 
+ </resources>
+\ No newline at end of file
+Index: .idea/deploymentTargetSelector.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"deploymentTargetSelector\">\r\n    <selectionStates>\r\n      <SelectionState runConfigName=\"app\">\r\n        <option name=\"selectionMode\" value=\"DROPDOWN\" />\r\n      </SelectionState>\r\n    </selectionStates>\r\n  </component>\r\n</project>
+===================================================================
+diff --git a/.idea/deploymentTargetSelector.xml b/.idea/deploymentTargetSelector.xml
+--- a/.idea/deploymentTargetSelector.xml	(revision 66b9bd1de8e910df7848de5df1d90d8ffef4ac3f)
++++ b/.idea/deploymentTargetSelector.xml	(date 1774884001917)
+@@ -4,6 +4,22 @@
+     <selectionStates>
+       <SelectionState runConfigName="app">
+         <option name="selectionMode" value="DROPDOWN" />
++        <DropdownSelection timestamp="2026-03-30T14:56:32.886036300Z">
++          <Target type="DEFAULT_BOOT">
++            <handle>
++              <DeviceId pluginId="LocalEmulator" identifier="path=C:\Users\laura valentina\.android\avd\Pixel_7.avd" />
++            </handle>
++          </Target>
++        </DropdownSelection>
++        <DialogSelection>
++          <targets>
++            <Target type="DEFAULT_BOOT">
++              <handle>
++                <DeviceId pluginId="PhysicalDevice" identifier="serial=x4tslzpfk7tcsgdm" />
++              </handle>
++            </Target>
++          </targets>
++        </DialogSelection>
+       </SelectionState>
+     </selectionStates>
+   </component>
