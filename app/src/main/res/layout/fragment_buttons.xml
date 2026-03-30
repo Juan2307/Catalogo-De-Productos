@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white">
+    android:background="@color/background">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -27,74 +27,77 @@
                 android:layout_margin="16dp"
                 android:fontFamily="@font/nico_moji_regular" />
 
-            <LinearLayout
+
+            <!-- Botón SUPPORT -->
+            <Button
+                android:id="@+id/btn_support"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:paddingHorizontal="24dp">
+                android:layout_height="60dp"
+                android:text="SUPPORT"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/primary"
+                android:drawableStart="@android:drawable/stat_sys_phone_call"
+                android:drawablePadding="10dp"
+                android:paddingStart="20dp"
+                android:layout_marginBottom="12dp"
+                app:cornerRadius="30dp"
+                android:elevation="4dp" />
 
-                <!-- Botón SUPPORT -->
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btn_support"
-                    android:layout_width="match_parent"
-                    android:layout_height="54dp"
-                    android:text="SUPPORT"
-                    android:textSize="16sp"
-                    android:textColor="@color/white"
-                    app:backgroundTint="@color/primary"
-                    app:icon="@drawable/ic_support"
-                    app:iconGravity="start"
-                    app:iconPadding="16dp"
-                    app:iconTint="@color/white"
-                    android:insetTop="0dp"
-                    android:insetBottom="0dp"
-                    android:layout_marginBottom="12dp"
-                    app:cornerRadius="27dp" />
-
-                <!-- Botón CATALOGO -->
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btn_catalogo"
-                    android:layout_width="match_parent"
-                    android:layout_height="54dp"
-                    android:text="CATALAGO"
-                    android:textSize="16sp"
-                    android:textColor="@color/white"
-                    app:backgroundTint="@color/primary"
-                    app:icon="@drawable/ic_catalogo"
-                    app:iconGravity="start"
-                    app:iconPadding="16dp"
-                    app:iconTint="@color/white"
-                    android:insetTop="0dp"
-                    android:insetBottom="0dp"
-                    android:layout_marginBottom="16dp"
-                    app:cornerRadius="27dp" />
-
-            </LinearLayout>
-
-            <ImageView
+            <!-- Botón CATALOGO -->
+            <Button
+                android:id="@+id/btn_catalogo"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@drawable/fondo_botones" />
+                android:layout_height="60dp"
+                android:text="CATALAGO"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/primary"
+                android:drawableStart="@android:drawable/stat_sys_download"
+                android:drawablePadding="10dp"
+                android:paddingStart="20dp"
+                android:layout_marginBottom="16dp"
+                app:cornerRadius="30dp"
+                android:elevation="4dp" />
 
+            <!-- Imagen Principal -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="380dp"
+                app:cardCornerRadius="0dp"
+                app:cardElevation="4dp"
+                android:layout_marginBottom="0dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/fondo_botones" />
+            </androidx.cardview.widget.CardView>
+
+            <!-- Bloque Azul de Texto -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/primary"
-                android:padding="32dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginHorizontal="40dp"
+                android:padding="24dp"
                 android:orientation="vertical">
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Gracias por\n visitar Sportpoli.\n Esperame verte\n pronto de nuevo\n para seguir\n impulsando tu\n estilo de vida\n activo."
-                    android:textSize="27sp"
+                    android:text="Gracias por visitar Sportpoli. Esperamos verte pronto de nuevo para seguir impulsando tu estilo de vida activo."
+                    android:textSize="20sp"
                     android:textColor="@color/white"
-                    android:gravity="center"
-                    android:lineSpacingMultiplier="1.1"
-                    android:fontFamily="sans-serif-black" />
-
+                    android:textStyle="bold"
+                    android:gravity="end"
+                    android:lineSpacingExtra="4dp"
+                    android:shadowColor="#40000000"
+                    android:shadowDx="2"
+                    android:shadowDy="2"
+                    android:shadowRadius="2" />
             </LinearLayout>
 
             <TextView
@@ -118,9 +121,9 @@
         android:layout_height="80dp"
         android:layout_alignParentBottom="true"
         android:background="@color/surface"
-        android:elevation="8dp"
         android:gravity="center"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:elevation="8dp">
 
         <ImageButton
             android:id="@+id/foot_profile"
