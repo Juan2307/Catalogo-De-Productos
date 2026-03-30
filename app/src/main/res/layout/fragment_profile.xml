@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background_gray">
+    android:background="@color/background">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -17,18 +17,20 @@
             android:orientation="vertical"
             android:padding="16dp">
 
+            <!-- Breadcrumb -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:fontFamily="@font/nico_moji_regular"
                 android:text="Modulo Perfil"
-                android:textColor="#CCCCCC"
-                android:textSize="14sp"
-                android:layout_marginBottom="8dp"/>
+                android:textColor="@color/text_hint"
+                android:textSize="14sp" />
 
-            <!-- CABECERA (Portada + Perfil + Nombre) -->
+            <!-- CABECERA -->
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="260dp">
+                android:layout_height="250dp">
 
                 <ImageView
                     android:layout_width="match_parent"
@@ -44,18 +46,17 @@
                     android:orientation="vertical">
 
                     <androidx.cardview.widget.CardView
-                        android:layout_width="90dp"
-                        android:layout_height="90dp"
-                        android:layout_marginBottom="12dp"
-                        app:cardCornerRadius="40dp"
-                        app:cardElevation="8dp"
-                        app:cardBackgroundColor="@color/sport_blue">
+                        android:layout_width="94dp"
+                        android:layout_height="94dp"
+                        app:cardBackgroundColor="@color/accent_green"
+                        app:cardCornerRadius="47dp"
+                        app:cardElevation="4dp">
 
                         <androidx.cardview.widget.CardView
-                            android:layout_width="86dp"
-                            android:layout_height="86dp"
+                            android:layout_width="88dp"
+                            android:layout_height="88dp"
                             android:layout_gravity="center"
-                            app:cardCornerRadius="43dp"
+                            app:cardCornerRadius="44dp"
                             app:cardElevation="0dp">
 
                             <ImageView
@@ -64,196 +65,328 @@
                                 android:scaleType="centerCrop"
                                 android:src="@drawable/img_pefil" />
                         </androidx.cardview.widget.CardView>
+
                     </androidx.cardview.widget.CardView>
 
                     <TextView
+                        style="@style/ProfileInfoLabel"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="@font/nico_moji_regular"
+                        android:lineSpacingMultiplier="0.7"
+                        android:shadowColor="#30004AAD"
+                        android:shadowDx="6"
+                        android:shadowDy="6"
+                        android:shadowRadius="1"
                         android:text="USER"
-                        android:textColor="@color/white"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
+                        android:textColor="@color/white" />
 
                     <TextView
+                        style="@style/ProfileInfoLabel"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="@font/nico_moji_regular"
+                        android:lineSpacingMultiplier="0.7"
+                        android:shadowColor="#30004AAD"
+                        android:shadowDx="6"
+                        android:shadowDy="6"
+                        android:shadowRadius="1"
                         android:text="Ana Lorena Guevara"
                         android:textColor="@color/white"
-                        android:textSize="22sp"
-                        android:textStyle="bold" />
+                        android:textSize="22sp" />
 
                     <TextView
-                        android:layout_width="220dp"
+                        style="@style/ProfileInfoLabel"
+                        android:layout_width="180dp"
                         android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="@font/nico_moji_regular"
                         android:gravity="center"
+                        android:lineSpacingMultiplier="0.7"
+                        android:shadowColor="#30004AAD"
+                        android:shadowDx="6"
+                        android:shadowDy="6"
+                        android:shadowRadius="1"
                         android:text="TRABAJA DURO Y DEJA QUE EL ÉXITO SEA EL QUE HAGA EL RUIDO"
                         android:textColor="@color/white"
-                        android:textSize="10sp"
-                        android:layout_marginTop="4dp" />
+                        android:textSize="9sp" />
+
                 </LinearLayout>
+
             </RelativeLayout>
 
-            <!-- SECCIÓN INFORMACIÓN PERSONAL -->
+            <!-- INFORMACIÓN PERSONAL -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                android:background="#F0F1F5"
-                android:elevation="0dp"
+                android:layout_margin="24dp"
+                android:background="@color/surface_variant"
                 android:orientation="vertical"
                 android:padding="20dp">
 
                 <TextView
+                    style="@style/ProfileInfoLabel"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/nico_moji_regular"
                     android:gravity="center"
+                    android:lineSpacingMultiplier="0.7"
+                    android:shadowColor="#30004AAD"
+                    android:shadowDx="6"
+                    android:shadowDy="6"
+                    android:shadowRadius="1"
                     android:text="Información Personal"
-                    android:textColor="#333333"
-                    android:textSize="24sp"
-                    android:textStyle="bold"
-                    android:shadowColor="#40000000"
-                    android:shadowDx="2"
-                    android:shadowDy="2"
-                    android:shadowRadius="2"
-                    android:layout_marginBottom="20dp" />
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
 
-                <!-- Filas -->
                 <LinearLayout style="@style/ProfileInfoRow">
-                    <TextView android:text="Edad" style="@style/ProfileInfoLabel" android:textSize="18sp" android:textColor="@color/sport_blue_light" />
-                    <TextView android:text="28 Años" style="@style/ProfileInfoValue" android:textSize="18sp" />
+
+                    <TextView
+                        style="@style/ProfileInfoLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="@font/nico_moji_regular"
+                        android:lineSpacingMultiplier="0.7"
+                        android:shadowColor="#30004AAD"
+                        android:shadowDx="6"
+                        android:shadowDy="6"
+                        android:shadowRadius="1"
+                        android:text="Edad"
+                        android:textColor="@color/primary" />
+
+                    <TextView
+                        style="@style/ProfileInfoLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="@font/nico_moji_regular"
+                        android:gravity="end"
+                        android:lineSpacingMultiplier="0.7"
+                        android:shadowColor="#30004AAD"
+                        android:shadowDx="6"
+                        android:shadowDy="6"
+                        android:shadowRadius="1"
+                        android:text="28 Años"
+                        android:textColor="@color/black" />
+
                 </LinearLayout>
 
                 <LinearLayout style="@style/ProfileInfoRow">
-                    <TextView android:text="Peso Actual" style="@style/ProfileInfoLabel" android:textSize="18sp" android:textColor="@color/sport_blue_light" />
-                    <TextView android:text="72 Kg" style="@style/ProfileInfoValue" android:textSize="18sp" />
+
+                    <TextView
+                        style="@style/ProfileInfoLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="@font/nico_moji_regular"
+                        android:lineSpacingMultiplier="0.7"
+                        android:shadowColor="#30004AAD"
+                        android:shadowDx="6"
+                        android:shadowDy="6"
+                        android:shadowRadius="1"
+                        android:text="Peso Actual"
+                        android:textColor="@color/primary" />
+
+                    <TextView
+                        style="@style/ProfileInfoLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="@font/nico_moji_regular"
+                        android:gravity="end"
+                        android:lineSpacingMultiplier="0.7"
+                        android:shadowColor="#30004AAD"
+                        android:shadowDx="6"
+                        android:shadowDy="6"
+                        android:shadowRadius="1"
+                        android:text="72 Kg"
+                        android:textColor="@color/black" />
+
                 </LinearLayout>
 
                 <LinearLayout style="@style/ProfileInfoRow">
-                    <TextView android:text="Estatura" style="@style/ProfileInfoLabel" android:textSize="18sp" android:textColor="@color/sport_blue_light" />
-                    <TextView android:text="1.72 m" style="@style/ProfileInfoValue" android:textSize="18sp" />
+
+                    <TextView
+                        style="@style/ProfileInfoLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="@font/nico_moji_regular"
+                        android:lineSpacingMultiplier="0.7"
+                        android:shadowColor="#30004AAD"
+                        android:shadowDx="6"
+                        android:shadowDy="6"
+                        android:shadowRadius="1"
+                        android:text="Estatura"
+                        android:textColor="@color/primary" />
+
+                    <TextView
+                        style="@style/ProfileInfoLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="@font/nico_moji_regular"
+                        android:gravity="end"
+                        android:lineSpacingMultiplier="0.7"
+                        android:shadowColor="#30004AAD"
+                        android:shadowDx="6"
+                        android:shadowDy="6"
+                        android:shadowRadius="1"
+                        android:text="1.72 m"
+                        android:textColor="@color/black" />
+
                 </LinearLayout>
 
-                <LinearLayout style="@style/ProfileInfoRow" android:layout_marginBottom="0dp">
-                    <TextView android:text="Imc" style="@style/ProfileInfoLabel" android:textSize="18sp" android:textColor="@color/sport_blue_light" />
-                    <TextView android:text="23.5 - normal" style="@style/ProfileInfoValue" android:textSize="18sp" />
+                <LinearLayout
+                    style="@style/ProfileInfoRow"
+                    android:layout_marginBottom="0dp">
+
+                    <TextView
+                        style="@style/ProfileInfoLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="@font/nico_moji_regular"
+                        android:lineSpacingMultiplier="0.7"
+                        android:shadowColor="#30004AAD"
+                        android:shadowDx="6"
+                        android:shadowDy="6"
+                        android:shadowRadius="1"
+                        android:text="Imc"
+                        android:textColor="@color/primary" />
+
+                    <TextView
+                        style="@style/ProfileInfoLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="@font/nico_moji_regular"
+                        android:gravity="end"
+                        android:lineSpacingMultiplier="0.7"
+                        android:shadowColor="#30004AAD"
+                        android:shadowDx="6"
+                        android:shadowDy="6"
+                        android:shadowRadius="1"
+                        android:text="23.5 - normal"
+                        android:textColor="@color/black" />
+
                 </LinearLayout>
 
             </LinearLayout>
 
-            <!-- IMAGEN MOTIVACIONAL (Proporción vertical mockup) -->
-            <RelativeLayout
+            <!-- IMAGEN MOTIVACIONAL -->
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="420dp"
-                android:layout_marginHorizontal="30dp"
-                android:layout_marginBottom="30dp">
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginBottom="20dp"
+                app:cardCornerRadius="2dp"
+                app:cardElevation="10dp">
 
-                <androidx.cardview.widget.CardView
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    app:cardCornerRadius="4dp"
-                    app:cardElevation="12dp">
+                    android:layout_height="match_parent">
 
-                    <RelativeLayout
+                    <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/content_perfil" />
 
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/content_perfil" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="40dp"
+                        android:gravity="center"
+                        android:text="ENCUENTRA\nTU LIMITE\nCON\nNOSOTROS"
+                        android:textColor="@color/white"
+                        android:textSize="32sp"
+                        android:textStyle="bold"
+                        android:shadowColor="@color/primary"
+                        android:shadowDx="0"
+                        android:shadowDy="0"
+                        android:shadowRadius="20"
+                        android:lineSpacingExtra="-8dp" />
 
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="#20000000" />
+                </RelativeLayout>
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerInParent="true"
-                            android:gravity="center"
-                            android:text="ENCUENTRA\nTU LIMITE\nCON\nNOSOTROS"
-                            android:textColor="@color/white"
-                            android:textSize="34sp"
-                            android:textStyle="bold"
-                            android:shadowColor="@color/sport_blue"
-                            android:shadowDx="0"
-                            android:shadowDy="0"
-                            android:shadowRadius="15"
-                            android:lineSpacingExtra="4dp" />
-                    </RelativeLayout>
-
-                </androidx.cardview.widget.CardView>
-            </RelativeLayout>
+            </androidx.cardview.widget.CardView>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:paddingVertical="24dp"
-                android:text="sportpoli@corporative.com"
-                android:textColor="@color/sport_blue"
-                android:textSize="16sp"
+                android:paddingVertical="16dp"
+                android:text="@string/email_subrayado"
+                android:textColor="@color/primary"
+                android:textSize="17sp"
                 android:textStyle="bold" />
 
         </LinearLayout>
+
     </ScrollView>
 
-    <!-- FOOTER CIRCULAR HD -->
+    <!-- FOOTER -->
     <LinearLayout
         android:id="@+id/footer_profile"
         android:layout_width="match_parent"
-        android:layout_height="85dp"
+        android:layout_height="80dp"
         android:layout_alignParentBottom="true"
-        android:background="@color/white"
-        android:elevation="12dp"
+        android:background="@color/surface"
+        android:elevation="8dp"
         android:gravity="center"
         android:orientation="horizontal">
 
         <ImageButton
             android:id="@+id/foot_photos"
-            android:layout_width="56dp"
-            android:layout_height="56dp"
-            android:layout_marginHorizontal="10dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="8dp"
             android:background="@drawable/footer_icon_bg"
-            android:padding="16dp"
+            android:padding="12dp"
             android:scaleType="fitCenter"
             android:src="@drawable/photo"
             app:tint="@color/white" />
 
         <ImageButton
             android:id="@+id/foot_video"
-            android:layout_width="56dp"
-            android:layout_height="56dp"
-            android:layout_marginHorizontal="10dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="8dp"
             android:background="@drawable/footer_icon_bg"
-            android:padding="16dp"
+            android:padding="12dp"
             android:scaleType="fitCenter"
             android:src="@drawable/video"
             app:tint="@color/white" />
 
         <ImageButton
             android:id="@+id/foot_web"
-            android:layout_width="56dp"
-            android:layout_height="56dp"
-            android:layout_marginHorizontal="10dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="8dp"
             android:background="@drawable/footer_icon_bg"
-            android:padding="16dp"
+            android:padding="12dp"
             android:scaleType="fitCenter"
             android:src="@drawable/web"
             app:tint="@color/white" />
 
         <ImageButton
             android:id="@+id/foot_buttons"
-            android:layout_width="56dp"
-            android:layout_height="56dp"
-            android:layout_marginHorizontal="10dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="8dp"
             android:background="@drawable/footer_icon_bg"
-            android:padding="16dp"
+            android:padding="12dp"
             android:scaleType="fitCenter"
             android:src="@drawable/buttons"
             app:tint="@color/white" />
+
     </LinearLayout>
 
 </RelativeLayout>

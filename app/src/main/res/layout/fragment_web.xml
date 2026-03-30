@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background_gray">
+    android:background="@color/background">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -18,13 +18,15 @@
             android:orientation="vertical"
             android:padding="16dp">
 
+            <!-- Breadcrumb -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Modulo Web"
-                android:textColor="#CCCCCC"
+                android:textColor="@color/text_hint"
                 android:textSize="14sp"
-                android:layout_marginBottom="10dp"/>
+                android:layout_margin="16dp"
+                android:fontFamily="@font/nico_moji_regular" />
 
             <!-- URL Bar -->
             <LinearLayout
@@ -42,14 +44,13 @@
                     android:backgroundTint="@color/white"
                     android:gravity="center_vertical"
                     android:paddingStart="12dp"
-                    android:paddingEnd="12dp"
-                    android:elevation="4dp">
+                    android:paddingEnd="12dp">
 
                     <ImageView
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:src="@drawable/web"
-                        app:tint="@color/sport_blue" />
+                        app:tint="@color/primary" />
 
                     <EditText
                         android:id="@+id/et_url"
@@ -57,7 +58,7 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:text="www.sportpoli.com"
-                        android:textColor="@color/sport_blue"
+                        android:textColor="@color/primary"
                         android:textSize="14sp"
                         android:textStyle="bold"
                         android:layout_marginStart="8dp"
@@ -65,13 +66,14 @@
                         android:hint="Ingresa URL"
                         android:inputType="textUri"
                         android:imeOptions="actionGo"
-                        android:singleLine="true"/>
+                        android:singleLine="true" />
 
                     <ImageView
                         android:layout_width="20dp"
                         android:layout_height="20dp"
                         android:src="@android:drawable/ic_menu_search"
-                        app:tint="@color/sport_blue" />
+                        app:tint="@color/primary" />
+
                 </LinearLayout>
 
                 <Button
@@ -80,13 +82,13 @@
                     android:layout_height="45dp"
                     android:text="Ir"
                     android:layout_marginStart="8dp"
-                    android:backgroundTint="@color/sport_blue"
+                    android:backgroundTint="@color/primary"
                     android:textColor="@color/white"
                     android:textAllCaps="false"
                     android:insetTop="0dp"
                     android:insetBottom="0dp"
                     app:cornerRadius="22dp"
-                    android:elevation="4dp"/>
+                    android:elevation="4dp" />
             </LinearLayout>
 
             <!-- Browser Nav -->
@@ -103,10 +105,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
                     android:text="Atrás"
-                    android:backgroundTint="@color/sport_blue"
+                    android:backgroundTint="@color/primary"
                     android:textColor="@color/white"
                     android:layout_marginEnd="8dp"
-                    app:cornerRadius="20dp"/>
+                    app:cornerRadius="20dp" />
 
                 <Button
                     android:id="@+id/btn_forward"
@@ -114,10 +116,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
                     android:text="Adelante"
-                    android:backgroundTint="@color/sport_blue"
+                    android:backgroundTint="@color/primary"
                     android:textColor="@color/white"
                     android:layout_marginEnd="8dp"
-                    app:cornerRadius="20dp"/>
+                    app:cornerRadius="20dp" />
 
                 <Button
                     android:id="@+id/btn_refresh"
@@ -125,9 +127,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
                     android:text="Recargar"
-                    android:backgroundTint="@color/sport_blue"
+                    android:backgroundTint="@color/primary"
                     android:textColor="@color/white"
-                    app:cornerRadius="20dp"/>
+                    app:cornerRadius="20dp" />
             </LinearLayout>
 
             <!-- WebView Card -->
@@ -148,6 +150,7 @@
                         android:layout_height="25dp"
                         android:background="#D3D3D3"
                         android:paddingHorizontal="8dp">
+
                         <TextView
                             android:id="@+id/tv_browser_title"
                             android:layout_width="wrap_content"
@@ -155,7 +158,7 @@
                             android:layout_centerInParent="true"
                             android:text="www.sportpoli.com"
                             android:textSize="10sp"
-                            android:textColor="#666666"/>
+                            android:textColor="#666666" />
                     </RelativeLayout>
 
                     <WebView
@@ -165,37 +168,44 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- Imagen Motivacional -->
+            <!-- IMAGEN MOTIVACIONAL -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="350dp"
-                android:layout_marginHorizontal="20dp"
-                android:layout_marginBottom="24dp"
-                app:cardCornerRadius="4dp"
+                android:layout_height="420dp"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginBottom="20dp"
+                app:cardCornerRadius="2dp"
                 app:cardElevation="10dp">
+
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
+
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="centerCrop"
                         android:src="@drawable/content_perfil" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_centerInParent="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="40dp"
                         android:gravity="center"
                         android:text="ENCUENTRA\nTU LIMITE\nCON\nNOSOTROS"
                         android:textColor="@color/white"
-                        android:textSize="30sp"
+                        android:textSize="32sp"
                         android:textStyle="bold"
-                        android:shadowColor="@color/sport_blue"
+                        android:shadowColor="@color/primary"
                         android:shadowDx="0"
                         android:shadowDy="0"
-                        android:shadowRadius="15"
-                        android:lineSpacingExtra="4dp"/>
+                        android:shadowRadius="20"
+                        android:lineSpacingExtra="-8dp" />
+
                 </RelativeLayout>
+
             </androidx.cardview.widget.CardView>
 
             <TextView
@@ -203,7 +213,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="&gt;&gt; www.sportpoli.com &lt;&lt;"
-                android:textColor="@color/sport_blue"
+                android:textColor="@color/primary"
                 android:textStyle="bold"
                 android:textSize="20sp"
                 android:gravity="center"
@@ -212,70 +222,72 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="sportpoli@corporative.com"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                android:textColor="@color/sport_blue"
                 android:gravity="center"
-                android:layout_marginBottom="10dp"/>
+                android:paddingVertical="16dp"
+                android:text="@string/email_subrayado"
+                android:textColor="@color/primary"
+                android:textSize="17sp"
+                android:textStyle="bold" />
 
         </LinearLayout>
+
     </ScrollView>
 
-    <!-- FOOTER CON 4 ICONOS (WEB ELIMINADO) -->
+    <!-- FOOTER -->
     <LinearLayout
         android:id="@+id/footer_web"
         android:layout_width="match_parent"
-        android:layout_height="85dp"
+        android:layout_height="80dp"
         android:layout_alignParentBottom="true"
-        android:background="@color/white"
-        android:elevation="12dp"
+        android:background="@color/surface"
         android:gravity="center"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:elevation="8dp">
 
         <ImageButton
             android:id="@+id/foot_profile"
-            android:layout_width="56dp"
-            android:layout_height="56dp"
-            android:layout_marginHorizontal="10dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="8dp"
             android:background="@drawable/footer_icon_bg"
-            android:padding="14dp"
+            android:padding="12dp"
             android:scaleType="fitCenter"
             android:src="@drawable/perfil"
             app:tint="@color/white" />
 
         <ImageButton
             android:id="@+id/foot_photos"
-            android:layout_width="56dp"
-            android:layout_height="56dp"
-            android:layout_marginHorizontal="10dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="8dp"
             android:background="@drawable/footer_icon_bg"
-            android:padding="16dp"
+            android:padding="12dp"
             android:scaleType="fitCenter"
             android:src="@drawable/photo"
             app:tint="@color/white" />
 
         <ImageButton
             android:id="@+id/foot_video"
-            android:layout_width="56dp"
-            android:layout_height="56dp"
-            android:layout_marginHorizontal="10dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="8dp"
             android:background="@drawable/footer_icon_bg"
-            android:padding="16dp"
+            android:padding="12dp"
             android:scaleType="fitCenter"
             android:src="@drawable/video"
             app:tint="@color/white" />
 
         <ImageButton
             android:id="@+id/foot_buttons"
-            android:layout_width="56dp"
-            android:layout_height="56dp"
-            android:layout_marginHorizontal="10dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="8dp"
             android:background="@drawable/footer_icon_bg"
-            android:padding="16dp"
+            android:padding="12dp"
             android:scaleType="fitCenter"
             android:src="@drawable/buttons"
             app:tint="@color/white" />
+
     </LinearLayout>
 
 </RelativeLayout>

@@ -12,56 +12,40 @@ class MenuFragment : Fragment(R.layout.fragment_menu) {
 
     private var listener: OnOptionClickListener? = null
 
+    private val menuItems by lazy {
+        mapOf(
+            "profile" to view?.findViewById<View>(R.id.btn_profile),
+            "photos" to view?.findViewById<View>(R.id.btn_photos),
+            "video" to view?.findViewById<View>(R.id.btn_video),
+            "web" to view?.findViewById<View>(R.id.btn_web),
+            "buttons" to view?.findViewById<View>(R.id.btn_buttons)
+        )
+    }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        listener = activity as? OnOptionClickListener
 
-        if (context is OnOptionClickListener) {
-            listener = context as OnOptionClickListener
-        }
+        setupClickListeners()
+    }
 
-        view.findViewById<View>(R.id.btn_profile).setOnClickListener { 
-            highlightOption("profile")
-            listener?.onOptionClicked("profile") 
-        }
-        view.findViewById<View>(R.id.btn_photos).setOnClickListener { 
-            highlightOption("photos")
-            listener?.onOptionClicked("photos") 
-        }
-        view.findViewById<View>(R.id.btn_video).setOnClickListener { 
-            highlightOption("video")
-            listener?.onOptionClicked("video") 
-        }
-        view.findViewById<View>(R.id.btn_web).setOnClickListener { 
-            highlightOption("web")
-            listener?.onOptionClicked("web") 
-        }
-        view.findViewById<View>(R.id.btn_buttons).setOnClickListener { 
-            highlightOption("buttons")
-            listener?.onOptionClicked("buttons") 
+    private fun setupClickListeners() {
+        menuItems.forEach { (tag, view) ->
+            view?.setOnClickListener {
+                highlightOption(tag)
+                listener?.onOptionClicked(tag)
+            }
         }
     }
 
     fun highlightOption(option: String) {
-        val views = listOf(
-            view?.findViewById<View>(R.id.btn_profile),
-            view?.findViewById<View>(R.id.btn_photos),
-            view?.findViewById<View>(R.id.btn_video),
-            view?.findViewById<View>(R.id.btn_web),
-            view?.findViewById<View>(R.id.btn_buttons)
-        )
-
-        // Limpiar fondos
-        views.forEach { it?.setBackgroundResource(android.R.color.transparent) }
-
-        // Aplicar Highlight (Fondo semitransparente como el mockup)
-        val selectedView = when (option) {
-            "profile" -> views[0]
-            "photos" -> views[1]
-            "video" -> views[2]
-            "web" -> views[3]
-            "buttons" -> views[4]
-            else -> null
+        menuItems.forEach { (tag, view) ->
+            if (tag == option) {
+                // Highlight (Fondo semitransparente como el mockup o color específico)
+                view?.setBackgroundColor(0x33FFFFFF)
+            } else {
+                view?.setBackgroundResource(android.R.color.transparent)
+            }
         }
-        selectedView?.setBackgroundColor(0x33FFFFFF) // 20% blanco
     }
 }

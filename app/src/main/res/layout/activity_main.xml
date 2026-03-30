@@ -16,7 +16,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/sport_blue"
+            android:background="@color/primary"
             app:titleTextColor="#FFFFFF" />
 
         <FrameLayout
@@ -31,7 +31,7 @@
         android:layout_width="260dp"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:background="@color/sport_blue">
+        android:background="@color/primary">
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/menu_fragment_container"
