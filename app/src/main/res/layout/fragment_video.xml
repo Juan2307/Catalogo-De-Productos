@@ -85,7 +85,7 @@
                         android:id="@+id/img_placeholder_tenis"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/portada_fondo"
+                        android:src="@drawable/video1"
                         android:scaleType="centerCrop" />
 
                     <RelativeLayout
@@ -179,7 +179,7 @@
                         android:id="@+id/img_placeholder_futbol"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/portada_fondo"
+                        android:src="@drawable/video2"
                         android:scaleType="centerCrop" />
 
                     <RelativeLayout
@@ -272,7 +272,7 @@
                         android:id="@+id/img_placeholder_salud"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/portada_fondo"
+                        android:src="@drawable/video3"
                         android:scaleType="centerCrop" />
 
                     <RelativeLayout
