@@ -3,4 +3,31 @@
     <string name="navigation_drawer_open">Abrir menú</string>
     <string name="navigation_drawer_close">Cerrar menú</string>
     <string name="email_subrayado"><u>sportpoli@corporative.com</u></string>
+
+
+
+
+
+
+
+
+
+
+    <!-- ================= FRAGMENTO BOTON ================= -->
+    <!-- Boton Support (texto) -->
+    <string name="btn_support">Support</string>
+    <string name="btn_catalogo">Catálogo</string>
+    <string name="btn_frase">Gracias por visitar Sportpoli. Esperamos verte pronto de nuevo para seguir impulsando tu estilo de vida activo.</string>
+    <string name="mod_btn">Modulo Botones</string>
+
+    <!-- Boton Support (imagenes) -->
+    <string name="desc_img_botones">Imagen Fondo </string>
+
+    <string name="desc_btn_menu">Imagen boton menu</string>
+    <string name="desc_btn_perfil">Imagen boton fotos</string>
+    <string name="desc_btn_fotos">Imagen boton fotos</string>
+    <string name="desc_btn_videos">Imagen boton videos</string>
+    <string name="desc_btn_web">Imagen boton web</string>
+    <string name="desc_btn_botones">Imagen boton botones</string>
+
 </resources>
