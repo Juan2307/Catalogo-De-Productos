@@ -25,6 +25,7 @@ public class ButtonsFragment extends BaseFragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+
         // BOTÓN SUPPORT
         Button btnSupport = view.findViewById(R.id.btn_support);
         btnSupport.setOnClickListener(v -> {
