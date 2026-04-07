@@ -33,7 +33,7 @@
             <!-- BOTÓN SUPPORT -->
             <Button
                 android:id="@+id/btn_support"
-                android:layout_width="match_parent"
+                android:layout_width="320dp"
                 android:layout_height="50dp"
                 android:text="@string/btn_support"
                 android:textAllCaps="false"
@@ -41,60 +41,217 @@
                 android:textStyle="bold"
                 android:textColor="@color/white"
                 android:backgroundTint="@color/primary"
-                android:drawableStart="@drawable/ic_support"
-                android:drawablePadding="12dp"
-                android:gravity="center_vertical"
+                android:gravity="center"
+                android:paddingStart="24dp"
+                android:paddingEnd="24dp"
                 android:layout_marginBottom="12dp"
-                app:cornerRadius="35dp"
+                android:layout_gravity="center"
                 android:elevation="6dp"
-                tools:ignore="VisualLintButtonSize" />
+                android:contentDescription="@string/desc_btn_support"/>
+
+            <!-- FORMULARIO SOPORTE -->
+            <LinearLayout
+                android:id="@+id/layout_support_form"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:padding="16dp"
+                android:layout_marginBottom="14dp"
+                android:background="@drawable/bg_card">
+
+                <!-- NOMBRE -->
+                <EditText
+                    android:id="@+id/etNombre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_nombre"
+                    android:minHeight="50dp"
+                    android:padding="14dp"
+                    android:textSize="14sp"
+                    android:background="@drawable/bg_input"
+                    android:autofillHints="name"
+                    android:inputType="textPersonName"/>
+
+                <!-- CORREO -->
+                <EditText
+                    android:id="@+id/etCorreo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_correo"
+                    android:inputType="textEmailAddress"
+                    android:minHeight="50dp"
+                    android:padding="14dp"
+                    android:textSize="14sp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_input"
+                    android:autofillHints="name" />
+
+                <!-- MENSAJE -->
+                <EditText
+                    android:id="@+id/etMensaje"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_mensaje"
+                    android:minHeight="90dp"
+                    android:gravity="top"
+                    android:padding="14dp"
+                    android:textSize="14sp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_input"
+                    android:inputType="textMultiLine"
+                    android:scrollHorizontally="false"
+                    android:lines="4"
+                    android:maxLines="6"
+                    android:autofillHints="none" />
+
+                <!-- BOTÓN -->
+                <Button
+                    android:id="@+id/btnEnviar"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/bg_button_rounded"
+                    android:layout_marginTop="14dp"
+                    android:elevation="6dp"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingTop="0dp"
+                    android:paddingBottom="0dp"
+                    android:text="@string/hint_enviar"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:gravity="center_vertical"
+                    android:drawableEnd="@drawable/ic_arrow_send"
+                    android:drawablePadding="8dp"
+                    android:contentDescription="@string/desc_enviar" />
+
+            </LinearLayout>
 
             <!-- BOTÓN CATÁLOGO -->
             <Button
                 android:id="@+id/btn_catalogo"
-                android:layout_width="match_parent"
+                android:layout_width="320dp"
                 android:layout_height="50dp"
-                android:text="@string/btn_catalogo"
-
-                android:textAllCaps="false"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:layout_marginBottom="12dp"
                 android:backgroundTint="@color/primary"
-                android:drawableStart="@drawable/ic_download"
-                android:drawablePadding="12dp"
-                android:gravity="center_vertical"
-                android:layout_marginBottom="16dp"
-                app:cornerRadius="35dp"
+                android:contentDescription="@string/desc_btn_catalogo"
                 android:elevation="6dp"
-                tools:ignore="VisualLintButtonSize" />
+                android:gravity="center"
+                android:paddingStart="24dp"
+                android:paddingEnd="24dp"
+                android:text="@string/btn_catalogo"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
-            <!-- IMAGEN -->
-            <ImageView
-                android:scaleType="fitCenter"
-                android:layout_width="match_parent"
-                android:layout_height="300dp"
-                android:paddingBottom="20dp"
-                android:contentDescription="@string/desc_img_botones"
-                android:src="@drawable/fondo_botones" />
-
-            <!-- BLOQUE AZUL -->
+            <!-- FAQ -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/primary"
-                android:padding="15dp"
+                android:layout_marginHorizontal="16dp"
                 android:orientation="vertical">
 
+                <!-- TITULO -->
                 <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/faq_titulo"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:layout_marginBottom="12dp"/>
+
+                <!-- PREGUNTA 1 -->
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/btn_frase"
-                    android:textSize="16sp"
-                    android:textColor="@color/white"
-                    android:gravity="center"
-                    android:lineSpacingExtra="4dp" />
+                    android:padding="14dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/bg_card"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/faq_q1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/faq1"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/faq_a1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="@string/res_faq1"
+                        android:visibility="gone"/>
+                </LinearLayout>
+
+                <!-- PREGUNTA 2 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="14dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/bg_card"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/faq_q2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/faq2"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/faq_a2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="@string/res_faq2"
+                        android:visibility="gone"/>
+                </LinearLayout>
+
             </LinearLayout>
+
+            <!-- IMAGEN -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="6dp">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:contentDescription="@string/desc_img_btn_fondo"
+                        android:src="@drawable/fondo_botones_n"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#66000000" />
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start|top"
+                        android:layout_margin="16dp"
+                        android:fontFamily="@font/nico_moji_regular"
+                        android:text="@string/btn_frase"
+                        android:textColor="@color/white"
+                        android:textSize="19sp"
+                        tools:ignore="TextSizeCheck" />
+                </FrameLayout>
+            </androidx.cardview.widget.CardView>
 
             <!-- EMAIL -->
             <TextView
@@ -128,12 +285,11 @@
             android:layout_height="55dp"
             android:layout_marginHorizontal="10dp"
             android:background="@drawable/footer_icon_bg"
-            android:contentDescription="@string/desc_btn_perfil"
+            android:contentDescription="@string/desc_foot"
             android:padding="10dp"
             android:scaleType="centerInside"
             android:src="@drawable/perfil"
-            app:tint="@color/white"
-            tools:ignore="DuplicateSpeakableTextCheck" />
+            app:tint="@color/white"/>
 
         <ImageButton
             android:id="@+id/foot_photos"

@@ -2,32 +2,79 @@
     <string name="app_name">Catalogo De Productos</string>
     <string name="navigation_drawer_open">Abrir menú</string>
     <string name="navigation_drawer_close">Cerrar menú</string>
+
+    <!-- ================= FRAGMENTO BOTON ================= -->
+    <!-- Boton Support Titulo (texto) -->
+    <string name="mod_btn">Modulo Botones</string>
+
+
+
+    <!-- ================= BOTON SOPORTE ================= -->
+    <!-- Boton soporte (imagen) -->
+    <string name="desc_btn_support">Imagen boton Soporte</string>
+
+    <!-- Boton soporte (texto) -->
+    <string name="btn_support">Soporte</string>
+
+
+
+    <!-- ================= BOTON FORMULARIO SOPORTE ================= -->
+    <!-- Boton Support Formulario (texto) -->
+    <string name="hint_nombre">Nombre</string>
+    <string name="hint_correo">Correo electrónico</string>
+    <string name="hint_mensaje">Mensaje</string>
+    <string name="hint_enviar">Enviar</string>
+
+    <!-- Boton Support Formulario (imagen) -->
+    <string name="desc_enviar">Imagen boton enviar</string>
+
+
+
+    <!-- ================= BOTON CATALOGO ================= -->
+    <!-- Boton Catalogo (imagen) -->
+    <string name="desc_btn_catalogo">Imagen boton Catalogo</string>
+
+    <!-- Boton Catalogo (texto) -->
+    <string name="btn_catalogo">Catálogo</string>
+
+
+
+    <!-- ================= BOTONES FAQ ================= -->
+    <!-- titulo (texto) -->
+    <string name="faq_titulo">Preguntas frecuentes</string>
+
+    <!-- FAQ 1 (texto) -->
+    <string name="faq1">¿Cómo descargo el catálogo?</string>
+    <string name="res_faq1">Presiona el botón de descarga y el archivo se guardará en tu dispositivo.</string>
+
+    <!-- FAQ 2 (texto) -->
+    <string name="faq2">¿Cómo contacto soporte?</string>
+    <string name="res_faq2">Puedes usar el formulario o escribir directamente al correo.</string>
+
+    <!-- ================= IMAGEN ================= -->
+    <!-- Frase (texto) -->
+    <string name="btn_frase">Gracias por visitar Sportpoli. Esperamos verte pronto de nuevo para seguir impulsando tu estilo de vida activo.</string>
+
+    <!-- Fondo (imagen) -->
+    <string name="desc_img_btn_fondo">Imagen boton fotos</string>
+
+
+
+
+    <!-- ================= EMAIL ================= -->
     <string name="email_subrayado"><u>sportpoli@corporative.com</u></string>
 
 
 
-
-
-
-
-
-
-
-    <!-- ================= FRAGMENTO BOTON ================= -->
-    <!-- Boton Support (texto) -->
-    <string name="btn_support">Support</string>
-    <string name="btn_catalogo">Catálogo</string>
-    <string name="btn_frase">Gracias por visitar Sportpoli. Esperamos verte pronto de nuevo para seguir impulsando tu estilo de vida activo.</string>
-    <string name="mod_btn">Modulo Botones</string>
-
-    <!-- Boton Support (imagenes) -->
-    <string name="desc_img_botones">Imagen Fondo </string>
-
+    <!-- ================= BOTONES FOOT ================= -->
+    <!-- Boton foot (imagen) -->
     <string name="desc_btn_menu">Imagen boton menu</string>
-    <string name="desc_btn_perfil">Imagen boton fotos</string>
+    <string name="desc_btn_perfil">Imagen boton Perfil</string>
     <string name="desc_btn_fotos">Imagen boton fotos</string>
     <string name="desc_btn_videos">Imagen boton videos</string>
     <string name="desc_btn_web">Imagen boton web</string>
     <string name="desc_btn_botones">Imagen boton botones</string>
+
+    <string name="desc_foot">Imagen foot</string>
 
 </resources>
