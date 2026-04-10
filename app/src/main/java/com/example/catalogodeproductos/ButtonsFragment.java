@@ -136,18 +136,18 @@ public class ButtonsFragment extends BaseFragment {
         q2.setOnClickListener(toggle);
     }
 
-        // ANIMAR FAQ
-        private void toggleView(View view) {
-            if (view.getVisibility() == View.GONE) {
-                view.setVisibility(View.VISIBLE);
-                view.setAlpha(0f);
-                view.animate().alpha(1f).setDuration(250).start();
-            } else {
-                view.animate()
-                        .alpha(0f)
-                        .setDuration(200)
-                        .withEndAction(() -> view.setVisibility(View.GONE))
-                        .start();
-            }
+    // ANIMAR FAQ
+    private void toggleView(View view) {
+        if (view.getVisibility() == View.GONE) {
+            view.setVisibility(View.VISIBLE);
+            view.setAlpha(0f);
+            view.animate().alpha(1f).setDuration(250).start();
+        } else {
+            view.animate()
+                    .alpha(0f)
+                    .setDuration(200)
+                    .withEndAction(() -> view.setVisibility(View.GONE))
+                    .start();
         }
+    }
 }

@@ -25,14 +25,12 @@
     <string name="desc_enviar">Imagen boton enviar</string>
 
 
-
     <!-- ================= BOTON CATALOGO ================= -->
     <!-- Boton Catalogo (imagen) -->
     <string name="desc_btn_catalogo">Imagen boton Catalogo</string>
 
     <!-- Boton Catalogo (texto) -->
     <string name="btn_catalogo">Catálogo</string>
-
 
 
     <!-- ================= BOTONES FAQ ================= -->
@@ -55,11 +53,8 @@
     <string name="desc_img_btn_fondo">Imagen boton fotos</string>
 
 
-
-
     <!-- ================= EMAIL ================= -->
     <string name="email_subrayado"><u>sportpoli@corporative.com</u></string>
-
 
 
     <!-- ================= BOTONES FOOT ================= -->
