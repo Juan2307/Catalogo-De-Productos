@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity implements MenuFragment.OnOp
         setContentView(R.layout.activity_main);
 
         //
-        Toast.makeText(this, "Entró a MainActivity", Toast.LENGTH_LONG).show();
+//        Toast.makeText(this, "Entró a MainActivity", Toast.LENGTH_LONG).show();
 
         // Toolbar
         Toolbar toolbar = findViewById(R.id.toolbar);

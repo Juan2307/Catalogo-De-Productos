@@ -7,16 +7,12 @@
     <!-- Boton Support Titulo (texto) -->
     <string name="mod_btn">Modulo Botones</string>
 
-
-
     <!-- ================= BOTON SOPORTE ================= -->
     <!-- Boton soporte (imagen) -->
     <string name="desc_btn_support">Imagen boton Soporte</string>
 
     <!-- Boton soporte (texto) -->
     <string name="btn_support">Soporte</string>
-
-
 
     <!-- ================= BOTON FORMULARIO SOPORTE ================= -->
     <!-- Boton Support Formulario (texto) -->
