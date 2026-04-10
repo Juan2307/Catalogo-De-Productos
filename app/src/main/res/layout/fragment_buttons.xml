@@ -47,7 +47,7 @@
                 android:layout_marginBottom="12dp"
                 android:layout_gravity="center"
                 android:elevation="6dp"
-                android:contentDescription="@string/desc_btn_support"/>
+                android:contentDescription="@string/desc_btn_support" />
 
             <!-- FORMULARIO SOPORTE -->
             <LinearLayout
@@ -71,7 +71,7 @@
                     android:textSize="14sp"
                     android:background="@drawable/bg_input"
                     android:autofillHints="name"
-                    android:inputType="textPersonName"/>
+                    android:inputType="textPersonName" />
 
                 <!-- CORREO -->
                 <EditText
@@ -160,7 +160,7 @@
                     android:text="@string/faq_titulo"
                     android:textStyle="bold"
                     android:textSize="18sp"
-                    android:layout_marginBottom="12dp"/>
+                    android:layout_marginBottom="12dp" />
 
                 <!-- PREGUNTA 1 -->
                 <LinearLayout
@@ -176,7 +176,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/faq1"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/faq_a1"
@@ -184,7 +184,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="6dp"
                         android:text="@string/res_faq1"
-                        android:visibility="gone"/>
+                        android:visibility="gone" />
                 </LinearLayout>
 
                 <!-- PREGUNTA 2 -->
@@ -201,7 +201,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/faq2"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/faq_a2"
@@ -209,7 +209,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="6dp"
                         android:text="@string/res_faq2"
-                        android:visibility="gone"/>
+                        android:visibility="gone" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -233,7 +233,7 @@
                         android:layout_height="match_parent"
                         android:scaleType="centerCrop"
                         android:contentDescription="@string/desc_img_btn_fondo"
-                        android:src="@drawable/fondo_botones_n"/>
+                        android:src="@drawable/fondo_botones_n" />
 
                     <View
                         android:layout_width="match_parent"
