@@ -105,30 +105,6 @@
                             android:padding="15dp"
                             android:elevation="4dp" />
 
-                        <ImageButton
-                            android:id="@+id/btn_rewind_tenis"
-                            android:layout_width="45dp"
-                            android:layout_height="45dp"
-                            android:layout_centerVertical="true"
-                            android:layout_toStartOf="@id/btn_play_tenis"
-                            android:layout_marginEnd="20dp"
-                            android:src="@android:drawable/ic_media_rew"
-                            android:background="@android:color/transparent"
-                            app:tint="@color/white"
-                            android:visibility="gone" />
-
-                        <ImageButton
-                            android:id="@+id/btn_forward_tenis"
-                            android:layout_width="45dp"
-                            android:layout_height="45dp"
-                            android:layout_centerVertical="true"
-                            android:layout_toEndOf="@id/btn_play_tenis"
-                            android:layout_marginStart="20dp"
-                            android:src="@android:drawable/ic_media_ff"
-                            android:background="@android:color/transparent"
-                            app:tint="@color/white"
-                            android:visibility="gone" />
-
                         <SeekBar
                             android:id="@+id/seekbar_tenis"
                             android:layout_width="match_parent"
@@ -198,30 +174,6 @@
                             android:backgroundTint="@color/white"
                             android:padding="15dp" />
 
-                        <ImageButton
-                            android:id="@+id/btn_rewind_futbol"
-                            android:layout_width="45dp"
-                            android:layout_height="45dp"
-                            android:layout_centerVertical="true"
-                            android:layout_toStartOf="@id/btn_play_futbol"
-                            android:layout_marginEnd="20dp"
-                            android:src="@android:drawable/ic_media_rew"
-                            android:background="@android:color/transparent"
-                            app:tint="@color/white"
-                            android:visibility="gone" />
-
-                        <ImageButton
-                            android:id="@+id/btn_forward_futbol"
-                            android:layout_width="45dp"
-                            android:layout_height="45dp"
-                            android:layout_centerVertical="true"
-                            android:layout_toEndOf="@id/btn_play_futbol"
-                            android:layout_marginStart="20dp"
-                            android:src="@android:drawable/ic_media_ff"
-                            android:background="@android:color/transparent"
-                            app:tint="@color/white"
-                            android:visibility="gone" />
-
                         <SeekBar
                             android:id="@+id/seekbar_futbol"
                             android:layout_width="match_parent"
@@ -290,30 +242,6 @@
                             android:background="@drawable/footer_icon_bg"
                             android:backgroundTint="@color/white"
                             android:padding="15dp" />
-
-                        <ImageButton
-                            android:id="@+id/btn_rewind_salud"
-                            android:layout_width="45dp"
-                            android:layout_height="45dp"
-                            android:layout_centerVertical="true"
-                            android:layout_toStartOf="@id/btn_play_salud"
-                            android:layout_marginEnd="20dp"
-                            android:src="@android:drawable/ic_media_rew"
-                            android:background="@android:color/transparent"
-                            app:tint="@color/white"
-                            android:visibility="gone" />
-
-                        <ImageButton
-                            android:id="@+id/btn_forward_salud"
-                            android:layout_width="45dp"
-                            android:layout_height="45dp"
-                            android:layout_centerVertical="true"
-                            android:layout_toEndOf="@id/btn_play_salud"
-                            android:layout_marginStart="20dp"
-                            android:src="@android:drawable/ic_media_ff"
-                            android:background="@android:color/transparent"
-                            app:tint="@color/white"
-                            android:visibility="gone" />
 
                         <SeekBar
                             android:id="@+id/seekbar_salud"
