@@ -3,6 +3,159 @@
     <string name="navigation_drawer_open">Abrir menú</string>
     <string name="navigation_drawer_close">Cerrar menú</string>
 
+
+
+
+
+
+
+
+
+
+    <!-- ================= FRAGMENTO PERFIL ================= -->
+    <!-- Modulo Perfil (texto) -->
+    <string name="mod_perfil">Modulo Perfil</string>
+
+    <!-- ================= NOMBRE Y FRASE ================= -->
+    <!-- Nombre y Frase (imagen) -->
+    <string name="desc_portada_perfil">Imagen de portada</string>
+    <string name="desc_foto_perfil">Foto de perfil</string>
+
+    <!-- Nombre y Frase (texto) -->
+    <string name="nombre_usuario_perfil">Ana Lorena Guevara</string>
+    <string name="frase_usuario_perfil">TRABAJA DURO Y DEJA QUE EL EXITO SEA EL QUE HAGA EL RUIDO</string>
+
+    <!-- ================= INFORMACIÓN PERSONAL ================= -->
+    <!-- información personal (texto) -->
+    <string name="info_personal">Información Personal</string>
+    <string name="edad">Edad</string>
+    <string name="peso">Peso</string>
+    <string name="estatura">Estatura</string>
+    <string name="imc">IMC</string>
+
+    <!-- Valores (texto) -->
+    <string name="edad_numero">28 años</string>
+    <string name="peso_numero">72 kg</string>
+    <string name="estatura_numero">1.72 m</string>
+    <string name="imc_numero">23.5 (Normal)</string>
+
+    <!-- ================= SECCION MOTIVACIONAL ================= -->
+    <!-- Motivacion (imagen) -->
+    <string name="desc_img_motivacional_perfil">Imagen motivacional de gimnasio</string>
+
+    <!-- Motivacion (texto) -->
+    <string name="frase_gym_perfil">Encuentra tu límite con nosotros</string>
+
+    <!-- ================= CONTACTO ================= -->
+    <string name="email_subrayado"><u>sportpoli@corporative.com</u></string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- ================= FRAGMENTO FOTOS ================= -->
+    <!-- Modulo Fotos (texto) -->
+    <string name="mod_fotos">Modulo Fotos</string>
+
+    <!-- ================= Portada ================= -->
+    <!-- Portada (imagen) -->
+    <string name="desc_portada_fotos">Imagen Portada de Fotos</string>
+
+    <!-- Frase (texto) -->
+    <string name="frase_portada_fotos">Todo lo que necesitas en un solo lugar</string>
+
+    <!-- ================= Productos ================= -->
+    <!-- Carrito (imagen) -->
+    <string name="desc_btn_carrito">Imagen boton Carrito</string>
+
+    <!-- Titulo (texto) -->
+    <string name="titulo_prod_fotos">Productos</string>
+
+    <!-- Descripcion (imagen) -->
+    <string name="desc_producto1_fotos">Imagen Producto 1 Fotos</string>
+    <string name="desc_producto2_fotos">Imagen Producto 2 Fotos</string>
+    <string name="desc_producto3_fotos">Imagen Producto 3 Fotos</string>
+    <string name="desc_producto4_fotos">Imagen Producto 4 Fotos</string>
+
+    <!-- TITULO (texto) -->
+    <string name="nom_prod1_fotos">Chaqueta Puller Adidas</string>
+    <string name="nom_prod2_fotos">Guayos Puma Predator</string>
+    <string name="nom_prod3_fotos">Snowboard Ing Board Fox</string>
+    <string name="nom_prod4_fotos">Raqueta Dull Wilson</string>
+
+    <!-- SUBTEXTO (texto) -->
+    <string name="car_prod1_fotos">Ropa deportiva</string>
+    <string name="car_prod2_fotos">Calzado deportivo</string>
+    <string name="car_prod3_fotos">Instrumentos deportivos</string>
+    <string name="car_prod4_fotos">Instrumentos deportivos</string>
+
+    <!-- PRECIO (texto) -->
+    <string name="precio_prod1_fotos">$325.000</string>
+    <string name="precio_prod2_fotos">$740.000</string>
+    <string name="precio_prod3_fotos">$1.200.000</string>
+    <string name="precio_prod4_fotos">$630.000</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- ================= FRAGMENTO VIDEOS ================= -->
+    <!-- Modulo Fotos (texto) -->
+    <string name="mod_videos">Modulo Videos</string>
+
+    <!-- Titulos Videos (texto) -->
+    <string name="titulo_video1_videos">Tenis: salud en cada golpe</string>
+    <string name="titulo_video2_videos">Fútbol: energía y bienestar</string>
+    <string name="titulo_video3_videos">Activa tu salud explorando</string>
+
+    <!-- BTN Videos (texto) -->
+    <string name="btn_play_Tenis">Tenis</string>
+    <string name="btn_play_futbol">Fútbol</string>
+    <string name="btn_play_salud">Salud</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <!-- ================= FRAGMENTO BOTON ================= -->
     <!-- Boton Support Titulo (texto) -->
     <string name="mod_btn">Modulo Botones</string>
@@ -50,11 +203,10 @@
     <string name="btn_frase">Gracias por visitar Sportpoli. Esperamos verte pronto de nuevo para seguir impulsando tu estilo de vida activo.</string>
 
     <!-- Fondo (imagen) -->
-    <string name="desc_img_btn_fondo">Imagen boton fotos</string>
+    <string name="desc_img_btn_fondo">Imagen boton fotos mot</string>
 
 
-    <!-- ================= EMAIL ================= -->
-    <string name="email_subrayado"><u>sportpoli@corporative.com</u></string>
+
 
 
     <!-- ================= BOTONES FOOT ================= -->
