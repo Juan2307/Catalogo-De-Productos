@@ -23,7 +23,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Modulo Web"
-                android:textColor="@color/text_hint"
+                android:textColor="#666666"
                 android:textSize="14sp"
                 android:layout_margin="16dp"
                 android:fontFamily="@font/nico_moji_regular" />
@@ -168,45 +168,63 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- IMAGEN MOTIVACIONAL -->
-            <androidx.cardview.widget.CardView
+            <!-- IMAGEN MOTIVACIONAL RESPONSIVE -->
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="420dp"
-                android:layout_marginHorizontal="40dp"
-                android:layout_marginBottom="20dp"
-                app:cardCornerRadius="2dp"
-                app:cardElevation="10dp">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_motivacional"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="0.8">
 
-                    <ImageView
+                    <FrameLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/content_perfil" />
+                        android:layout_height="wrap_content">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginBottom="40dp"
-                        android:gravity="center"
-                        android:text="ENCUENTRA\nTU LIMITE\nCON\nNOSOTROS"
-                        android:textColor="@color/white"
-                        android:textSize="32sp"
-                        android:textStyle="bold"
-                        android:shadowColor="@color/primary"
-                        android:shadowDx="0"
-                        android:shadowDy="0"
-                        android:shadowRadius="20"
-                        android:lineSpacingExtra="-8dp" />
+                        <ImageView
+                            android:id="@+id/img_motivacional"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:contentDescription="@string/desc_img_motivacional_perfil"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/gym" />
 
-                </RelativeLayout>
+                        <!-- Overlay oscuro para que la letra blanca se lea siempre bien -->
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#40000000" />
 
-            </androidx.cardview.widget.CardView>
+                    </FrameLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:elevation="5dp"
+                    android:fontFamily="@font/nico_moji_regular"
+                    android:gravity="center"
+                    android:text="@string/frase_gym_perfil"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="@id/card_motivacional"
+                    app:layout_constraintEnd_toEndOf="@id/card_motivacional"
+                    app:layout_constraintStart_toStartOf="@id/card_motivacional"
+                    app:layout_constraintTop_toTopOf="@id/card_motivacional"
+                    app:layout_constraintWidth_percent="0.6" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TextView
                 android:id="@+id/tv_footer_url"
@@ -219,6 +237,7 @@
                 android:gravity="center"
                 android:layout_marginBottom="16dp" />
 
+            <!-- CONTACTO -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

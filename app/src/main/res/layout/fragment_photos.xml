@@ -39,13 +39,13 @@
                     android:layout_height="match_parent"
                     android:scaleType="centerCrop"
                     android:src="@drawable/fondo_fotos"
-                    android:contentDescription="@string/desc_portada_fotos"/>
+                    android:contentDescription="@string/desc_portada_fotos" />
 
                 <!-- OVERLAY OSCURO -->
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#55000000"/>
+                    android:background="#55000000" />
 
                 <TextView
                     style="@style/ProfileInfoLabel"
@@ -60,7 +60,7 @@
                     android:text="@string/frase_portada_fotos"
                     android:textColor="@color/white"
                     android:textSize="28sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
             </RelativeLayout>
 
             <!-- Titulo Seccion Productos -->
@@ -113,7 +113,7 @@
                             android:layout_gravity="end"
                             android:contentDescription="@string/desc_btn_carrito"
                             android:src="@drawable/shopping_cart"
-                            app:tint="@color/primary"/>
+                            app:tint="@color/primary" />
 
                         <!-- IMAGEN -->
                         <androidx.cardview.widget.CardView
@@ -142,7 +142,7 @@
                             android:textSize="14sp"
                             android:textStyle="bold"
                             android:textColor="@color/primary"
-                            android:layout_marginTop="10dp"/>
+                            android:layout_marginTop="10dp" />
 
                         <!-- SUBTEXTO -->
                         <TextView
@@ -151,7 +151,7 @@
                             android:text="@string/car_prod1_fotos"
                             android:textSize="12sp"
                             android:textColor="#777777"
-                            android:layout_marginTop="2dp"/>
+                            android:layout_marginTop="2dp" />
 
                         <!-- PRECIO -->
                         <TextView
@@ -161,7 +161,7 @@
                             android:textSize="14sp"
                             android:textStyle="bold"
                             android:textColor="@color/primary"
-                            android:layout_marginTop="6dp"/>
+                            android:layout_marginTop="6dp" />
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
@@ -189,7 +189,7 @@
                             android:layout_gravity="end"
                             android:contentDescription="@string/desc_btn_carrito"
                             android:src="@drawable/shopping_cart"
-                            app:tint="@color/primary"/>
+                            app:tint="@color/primary" />
 
                         <!-- IMAGEN -->
                         <androidx.cardview.widget.CardView
@@ -206,7 +206,7 @@
                                 android:padding="10dp"
                                 android:scaleType="fitCenter"
                                 android:contentDescription="@string/desc_producto2_fotos"
-                                android:src="@drawable/producto2"/>
+                                android:src="@drawable/producto2" />
                         </androidx.cardview.widget.CardView>
 
                         <!-- TITULO -->
@@ -217,7 +217,7 @@
                             android:textSize="14sp"
                             android:textStyle="bold"
                             android:textColor="@color/primary"
-                            android:layout_marginTop="10dp"/>
+                            android:layout_marginTop="10dp" />
 
                         <!-- SUBTEXTO -->
                         <TextView
@@ -226,7 +226,7 @@
                             android:text="@string/car_prod2_fotos"
                             android:textSize="12sp"
                             android:textColor="#777777"
-                            android:layout_marginTop="2dp"/>
+                            android:layout_marginTop="2dp" />
 
                         <!-- PRECIO -->
                         <TextView
@@ -236,7 +236,7 @@
                             android:textSize="14sp"
                             android:textStyle="bold"
                             android:textColor="@color/primary"
-                            android:layout_marginTop="6dp"/>
+                            android:layout_marginTop="6dp" />
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
@@ -264,7 +264,7 @@
                             android:layout_gravity="end"
                             android:contentDescription="@string/desc_btn_carrito"
                             android:src="@drawable/shopping_cart"
-                            app:tint="@color/primary"/>
+                            app:tint="@color/primary" />
 
                         <!-- IMAGEN -->
                         <androidx.cardview.widget.CardView
@@ -281,7 +281,7 @@
                                 android:padding="10dp"
                                 android:scaleType="fitCenter"
                                 android:contentDescription="@string/desc_producto3_fotos"
-                                android:src="@drawable/producto3"/>
+                                android:src="@drawable/producto3" />
                         </androidx.cardview.widget.CardView>
 
                         <!-- TITULO -->
@@ -292,7 +292,7 @@
                             android:textSize="14sp"
                             android:textStyle="bold"
                             android:textColor="@color/primary"
-                            android:layout_marginTop="10dp"/>
+                            android:layout_marginTop="10dp" />
 
                         <!-- SUBTEXTO -->
                         <TextView
@@ -301,7 +301,7 @@
                             android:text="@string/car_prod3_fotos"
                             android:textSize="12sp"
                             android:textColor="#777777"
-                            android:layout_marginTop="2dp"/>
+                            android:layout_marginTop="2dp" />
 
                         <!-- PRECIO -->
                         <TextView
@@ -311,7 +311,7 @@
                             android:textSize="14sp"
                             android:textStyle="bold"
                             android:textColor="@color/primary"
-                            android:layout_marginTop="6dp"/>
+                            android:layout_marginTop="6dp" />
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
@@ -339,7 +339,7 @@
                             android:layout_gravity="end"
                             android:contentDescription="@string/desc_btn_carrito"
                             android:src="@drawable/shopping_cart"
-                            app:tint="@color/primary"/>
+                            app:tint="@color/primary" />
 
                         <!-- IMAGEN -->
                         <androidx.cardview.widget.CardView
@@ -356,7 +356,7 @@
                                 android:padding="10dp"
                                 android:scaleType="fitCenter"
                                 android:contentDescription="@string/desc_producto4_fotos"
-                                android:src="@drawable/producto4"/>
+                                android:src="@drawable/producto4" />
                         </androidx.cardview.widget.CardView>
 
                         <!-- TITULO -->
@@ -367,7 +367,7 @@
                             android:textSize="14sp"
                             android:textStyle="bold"
                             android:textColor="@color/primary"
-                            android:layout_marginTop="10dp"/>
+                            android:layout_marginTop="10dp" />
 
                         <!-- SUBTEXTO -->
                         <TextView
@@ -376,7 +376,7 @@
                             android:text="@string/car_prod4_fotos"
                             android:textSize="12sp"
                             android:textColor="#777777"
-                            android:layout_marginTop="2dp"/>
+                            android:layout_marginTop="2dp" />
 
                         <!-- PRECIO -->
                         <TextView
@@ -386,7 +386,7 @@
                             android:textSize="14sp"
                             android:textStyle="bold"
                             android:textColor="@color/primary"
-                            android:layout_marginTop="6dp"/>
+                            android:layout_marginTop="6dp" />
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
