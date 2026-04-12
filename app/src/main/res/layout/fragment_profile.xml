@@ -8,7 +8,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/footer_profile"
+        android:layout_above="@id/footer_buttons_layout"
         android:scrollbars="none">
 
         <LinearLayout
@@ -23,95 +23,84 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:fontFamily="@font/nico_moji_regular"
-                android:text="Modulo Perfil"
-                android:textColor="@color/text_hint"
+                android:text="@string/mod_perfil"
+                android:textColor="#666666"
                 android:textSize="14sp" />
 
             <!-- CABECERA -->
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="250dp">
+                android:layout_height="260dp">
 
+                <!-- IMAGEN FONDO -->
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/fondo_perfil" />
+                    android:src="@drawable/fondo_perfil"
+                    android:contentDescription="@string/desc_portada_perfil"/>
 
+                <!-- OVERLAY OSCURO -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#55000000"/>
+
+                <!-- CONTENIDO -->
                 <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:layout_centerInParent="true"
                     android:gravity="center"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:paddingHorizontal="24dp">
 
+                    <!-- FOTO PERFIL -->
                     <androidx.cardview.widget.CardView
-                        android:layout_width="94dp"
-                        android:layout_height="94dp"
-                        app:cardBackgroundColor="@color/accent_green"
-                        app:cardCornerRadius="47dp"
-                        app:cardElevation="4dp">
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        app:cardBackgroundColor="@color/black"
+                        app:cardCornerRadius="50dp"
+                        app:cardElevation="6dp">
 
                         <androidx.cardview.widget.CardView
-                            android:layout_width="88dp"
-                            android:layout_height="88dp"
+                            android:layout_width="92dp"
+                            android:layout_height="92dp"
                             android:layout_gravity="center"
-                            app:cardCornerRadius="44dp"
+                            app:cardCornerRadius="46dp"
                             app:cardElevation="0dp">
 
                             <ImageView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:scaleType="centerCrop"
-                                android:src="@drawable/img_pefil" />
+                                android:src="@drawable/img_perfil"
+                                android:contentDescription="@string/desc_foto_perfil" />
                         </androidx.cardview.widget.CardView>
 
                     </androidx.cardview.widget.CardView>
 
+                    <!-- NOMBRE -->
                     <TextView
-                        style="@style/ProfileInfoLabel"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:fontFamily="@font/nico_moji_regular"
-                        android:lineSpacingMultiplier="0.7"
-                        android:shadowColor="#30004AAD"
-                        android:shadowDx="6"
-                        android:shadowDy="6"
-                        android:shadowRadius="1"
-                        android:text="USER"
-                        android:textColor="@color/white" />
-
-                    <TextView
-                        style="@style/ProfileInfoLabel"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:fontFamily="@font/nico_moji_regular"
-                        android:lineSpacingMultiplier="0.7"
-                        android:shadowColor="#30004AAD"
-                        android:shadowDx="6"
-                        android:shadowDy="6"
-                        android:shadowRadius="1"
-                        android:text="Ana Lorena Guevara"
+                        android:text="@string/nombre_usuario_perfil"
                         android:textColor="@color/white"
-                        android:textSize="22sp" />
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="4dp"/>
 
+                    <!-- FRASE -->
                     <TextView
-                        style="@style/ProfileInfoLabel"
-                        android:layout_width="180dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:fontFamily="@font/nico_moji_regular"
+                        android:text="@string/frase_usuario_perfil"
+                        android:textColor="@color/white"
+                        android:textSize="11sp"
                         android:gravity="center"
-                        android:lineSpacingMultiplier="0.7"
-                        android:shadowColor="#30004AAD"
-                        android:shadowDx="6"
-                        android:shadowDy="6"
-                        android:shadowRadius="1"
-                        android:text="TRABAJA DURO Y DEJA QUE EL ÉXITO SEA EL QUE HAGA EL RUIDO"
-                        android:textColor="@color/white"
-                        android:textSize="9sp" />
+                        android:layout_marginTop="6dp"
+                        android:paddingHorizontal="24dp"
+                        android:alpha="0.9"/>
 
                 </LinearLayout>
 
@@ -121,212 +110,162 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="24dp"
-                android:background="@color/surface_variant"
                 android:orientation="vertical"
-                android:padding="20dp">
+                android:layout_margin="16dp"
+                android:padding="20dp"
+                android:background="@drawable/bg_card"
+                android:elevation="6dp">
 
                 <TextView
-                    style="@style/ProfileInfoLabel"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/nico_moji_regular"
                     android:gravity="center"
-                    android:lineSpacingMultiplier="0.7"
-                    android:shadowColor="#30004AAD"
-                    android:shadowDx="6"
-                    android:shadowDy="6"
-                    android:shadowRadius="1"
-                    android:text="Información Personal"
-                    android:textColor="@color/black"
-                    android:textSize="22sp"
-                    android:textStyle="bold" />
+                    android:text="@string/info_personal"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#222222"
+                    android:layout_marginBottom="16dp"/>
 
-                <LinearLayout style="@style/ProfileInfoRow">
-
-                    <TextView
-                        style="@style/ProfileInfoLabel"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:fontFamily="@font/nico_moji_regular"
-                        android:lineSpacingMultiplier="0.7"
-                        android:shadowColor="#30004AAD"
-                        android:shadowDx="6"
-                        android:shadowDy="6"
-                        android:shadowRadius="1"
-                        android:text="Edad"
-                        android:textColor="@color/primary" />
-
-                    <TextView
-                        style="@style/ProfileInfoLabel"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:fontFamily="@font/nico_moji_regular"
-                        android:gravity="end"
-                        android:lineSpacingMultiplier="0.7"
-                        android:shadowColor="#30004AAD"
-                        android:shadowDx="6"
-                        android:shadowDy="6"
-                        android:shadowRadius="1"
-                        android:text="28 Años"
-                        android:textColor="@color/black" />
-
-                </LinearLayout>
-
-                <LinearLayout style="@style/ProfileInfoRow">
-
-                    <TextView
-                        style="@style/ProfileInfoLabel"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:fontFamily="@font/nico_moji_regular"
-                        android:lineSpacingMultiplier="0.7"
-                        android:shadowColor="#30004AAD"
-                        android:shadowDx="6"
-                        android:shadowDy="6"
-                        android:shadowRadius="1"
-                        android:text="Peso Actual"
-                        android:textColor="@color/primary" />
-
-                    <TextView
-                        style="@style/ProfileInfoLabel"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:fontFamily="@font/nico_moji_regular"
-                        android:gravity="end"
-                        android:lineSpacingMultiplier="0.7"
-                        android:shadowColor="#30004AAD"
-                        android:shadowDx="6"
-                        android:shadowDy="6"
-                        android:shadowRadius="1"
-                        android:text="72 Kg"
-                        android:textColor="@color/black" />
-
-                </LinearLayout>
-
-                <LinearLayout style="@style/ProfileInfoRow">
-
-                    <TextView
-                        style="@style/ProfileInfoLabel"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:fontFamily="@font/nico_moji_regular"
-                        android:lineSpacingMultiplier="0.7"
-                        android:shadowColor="#30004AAD"
-                        android:shadowDx="6"
-                        android:shadowDy="6"
-                        android:shadowRadius="1"
-                        android:text="Estatura"
-                        android:textColor="@color/primary" />
-
-                    <TextView
-                        style="@style/ProfileInfoLabel"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:fontFamily="@font/nico_moji_regular"
-                        android:gravity="end"
-                        android:lineSpacingMultiplier="0.7"
-                        android:shadowColor="#30004AAD"
-                        android:shadowDx="6"
-                        android:shadowDy="6"
-                        android:shadowRadius="1"
-                        android:text="1.72 m"
-                        android:textColor="@color/black" />
-
-                </LinearLayout>
-
+                <!-- EDAD -->
                 <LinearLayout
-                    style="@style/ProfileInfoRow"
-                    android:layout_marginBottom="0dp">
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingVertical="8dp">
 
                     <TextView
-                        style="@style/ProfileInfoLabel"
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:fontFamily="@font/nico_moji_regular"
-                        android:lineSpacingMultiplier="0.7"
-                        android:shadowColor="#30004AAD"
-                        android:shadowDx="6"
-                        android:shadowDy="6"
-                        android:shadowRadius="1"
-                        android:text="Imc"
-                        android:textColor="@color/primary" />
+                        android:layout_weight="1"
+                        android:text="@string/edad"
+                        android:textColor="#666666"
+                        android:textSize="14sp"/>
 
                     <TextView
-                        style="@style/ProfileInfoLabel"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:fontFamily="@font/nico_moji_regular"
-                        android:gravity="end"
-                        android:lineSpacingMultiplier="0.7"
-                        android:shadowColor="#30004AAD"
-                        android:shadowDx="6"
-                        android:shadowDy="6"
-                        android:shadowRadius="1"
-                        android:text="23.5 - normal"
-                        android:textColor="@color/black" />
+                        android:text="@string/edad_numero"
+                        android:textColor="#000000"
+                        android:textStyle="bold"/>
+                </LinearLayout>
 
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#EEEEEE"/>
+
+                <!-- PESO -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingVertical="8dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/peso"
+                        android:textColor="#666666"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/peso_numero"
+                        android:textColor="#000000"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#EEEEEE"/>
+
+                <!-- ESTATURA -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingVertical="8dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/estatura"
+                        android:textColor="#666666"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/estatura_numero"
+                        android:textColor="#000000"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#EEEEEE"/>
+
+                <!-- IMC -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="12dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/imc"
+                        android:textColor="#666666"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/imc_numero"
+                        android:textColor="#2E7D32"
+                        android:textStyle="bold"/>
                 </LinearLayout>
 
             </LinearLayout>
 
             <!-- IMAGEN MOTIVACIONAL -->
-            <androidx.cardview.widget.CardView
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="420dp"
-                android:layout_marginHorizontal="40dp"
-                android:layout_marginBottom="20dp"
-                app:cardCornerRadius="2dp"
-                app:cardElevation="10dp">
+                android:layout_height="300dp">
 
-                <RelativeLayout
+                <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="250dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/gym"
+                    android:layout_margin="16dp"
+                    android:contentDescription="@string/desc_img_motivacional_perfil"/>
 
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/content_perfil" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/frase_gym_perfil"
+                    android:paddingStart="110dp"
+                    android:paddingEnd="95dp"
+                    android:textSize="20sp"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="@font/nico_moji_regular"
+                    android:layout_gravity="center"/>
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginBottom="40dp"
-                        android:gravity="center"
-                        android:text="ENCUENTRA\nTU LIMITE\nCON\nNOSOTROS"
-                        android:textColor="@color/white"
-                        android:textSize="32sp"
-                        android:textStyle="bold"
-                        android:shadowColor="@color/primary"
-                        android:shadowDx="0"
-                        android:shadowDy="0"
-                        android:shadowRadius="20"
-                        android:lineSpacingExtra="-8dp" />
+            </FrameLayout>
 
-                </RelativeLayout>
-
-            </androidx.cardview.widget.CardView>
-
+            <!-- CONTACTO -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:paddingVertical="16dp"
                 android:text="@string/email_subrayado"
-                android:textColor="@color/primary"
-                android:textSize="17sp"
-                android:textStyle="bold" />
+                android:textAlignment="center"
+                android:textColor="#1F4E8C"
+                android:padding="10dp"/>
 
         </LinearLayout>
 
@@ -334,20 +273,21 @@
 
     <!-- FOOTER -->
     <LinearLayout
-        android:id="@+id/footer_profile"
+        android:id="@+id/footer_buttons_layout"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_alignParentBottom="true"
         android:background="@color/surface"
-        android:elevation="8dp"
         android:gravity="center"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:elevation="8dp">
 
         <ImageButton
             android:id="@+id/foot_photos"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginHorizontal="8dp"
+            android:contentDescription="@string/desc_btn_fotos"
             android:background="@drawable/footer_icon_bg"
             android:padding="12dp"
             android:scaleType="fitCenter"
@@ -359,6 +299,7 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginHorizontal="8dp"
+            android:contentDescription="@string/desc_btn_videos"
             android:background="@drawable/footer_icon_bg"
             android:padding="12dp"
             android:scaleType="fitCenter"
@@ -370,6 +311,7 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginHorizontal="8dp"
+            android:contentDescription="@string/desc_btn_web"
             android:background="@drawable/footer_icon_bg"
             android:padding="12dp"
             android:scaleType="fitCenter"
@@ -381,6 +323,7 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginHorizontal="8dp"
+            android:contentDescription="@string/desc_btn_botones"
             android:background="@drawable/footer_icon_bg"
             android:padding="12dp"
             android:scaleType="fitCenter"

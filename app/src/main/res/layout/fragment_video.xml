@@ -21,43 +21,48 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Modulo Video"
-                android:textColor="@color/text_hint"
+                android:text="@string/mod_videos"
+                android:textColor="#666666"
                 android:textSize="14sp"
                 android:layout_margin="16dp"
                 android:fontFamily="@font/nico_moji_regular" />
 
-            <!-- Headline Artístico Mejorado -->
+            <!-- Headline -->
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:padding="24dp"
                 android:layout_marginBottom="40dp">
 
+                <!-- línea decorativa suave -->
                 <View
-                    android:layout_width="600dp"
-                    android:layout_height="1.5dp"
+                    android:layout_width="300dp"
+                    android:layout_height="2dp"
                     android:background="@color/primary"
-                    android:rotation="-40"
-                    android:alpha="0.3"
+                    android:alpha="0.15"
+                    android:rotation="-20"
                     android:layout_alignParentEnd="true"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="-150dp" />
+                    android:layout_marginEnd="-80dp"
+                    android:layout_marginTop="20dp"/>
 
+                <!-- texto principal -->
                 <TextView
                     android:id="@+id/headline_video"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
-                    android:text="has\nparte\ndel 5%\nque ha\ncambiado\nsu vida"
+                    android:text="Haz\nparte\ndel 5%\nque ha\ncambiado\nsu vida"
                     android:textColor="@color/primary"
-                    android:textSize="42sp"
+                    android:textSize="34sp"
                     android:gravity="end"
-                    android:lineSpacingMultiplier="0.7"
+                    android:lineSpacingMultiplier="0.85"
                     android:fontFamily="@font/nico_moji_regular"
-                    android:shadowColor="#30004AAD"
-                    android:shadowDx="6"
-                    android:shadowDy="6"
-                    android:shadowRadius="1" />
+
+                    android:shadowColor="#20000000"
+                    android:shadowDx="0"
+                    android:shadowDy="3"
+                    android:shadowRadius="6"/>
+
             </RelativeLayout>
 
             <!-- Video 1: Tenis -->
@@ -98,6 +103,7 @@
                             android:layout_width="65dp"
                             android:layout_height="65dp"
                             android:layout_centerInParent="true"
+                            android:contentDescription="@string/btn_play_Tenis"
                             android:src="@android:drawable/ic_media_play"
                             app:tint="@color/primary"
                             android:background="@drawable/footer_icon_bg"
@@ -121,7 +127,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Tenis: salud en cada golpe"
+                    android:text="@string/titulo_video1_videos"
                     android:background="#EBEDF2"
                     android:padding="12dp"
                     android:gravity="center"
@@ -166,6 +172,7 @@
                         <ImageView
                             android:id="@+id/btn_play_futbol"
                             android:layout_width="65dp"
+                            android:contentDescription="@string/btn_play_futbol"
                             android:layout_height="65dp"
                             android:layout_centerInParent="true"
                             android:src="@android:drawable/ic_media_play"
@@ -190,7 +197,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Fútbol: energía y bienestar"
+                    android:text="@string/titulo_video2_videos"
                     android:background="#EBEDF2"
                     android:padding="12dp"
                     android:gravity="center"
@@ -236,6 +243,7 @@
                             android:id="@+id/btn_play_salud"
                             android:layout_width="65dp"
                             android:layout_height="65dp"
+                            android:contentDescription="@string/btn_play_salud"
                             android:layout_centerInParent="true"
                             android:src="@android:drawable/ic_media_play"
                             app:tint="@color/primary"
@@ -259,7 +267,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Activa tu salud explorando"
+                    android:text="@string/titulo_video3_videos"
                     android:background="#EBEDF2"
                     android:padding="12dp"
                     android:gravity="center"
