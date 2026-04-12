@@ -2,55 +2,30 @@ package com.example.catalogodeproductos;
 
 import android.os.Bundle;
 
-import androidx.activity.OnBackPressedCallback;
-import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.core.view.GravityCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 
 public class MainActivity extends AppCompatActivity implements MenuFragment.OnOptionClickListener {
 
-    private DrawerLayout drawerLayout;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_main);
-
-        //
-//        Toast.makeText(this, "Entró a MainActivity", Toast.LENGTH_LONG).show();
 
         // Toolbar
         Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        if (toolbar != null) {
+            setSupportActionBar(toolbar);
+        }
 
-        // Drawer
-        drawerLayout = findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawerLayout, toolbar,
-                R.string.navigation_drawer_open, R.string.navigation_drawer_close
-        );
-        drawerLayout.addDrawerListener(toggle);
-        toggle.syncState();
+        // Cargar el menú (sidebar fijo)
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.menu_fragment_container, new MenuFragment())
+                .commit();
 
-        // Botón atrás
-        getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
-            @Override
-            public void handleOnBackPressed() {
-                if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
-                    drawerLayout.closeDrawer(GravityCompat.START);
-                } else {
-                    setEnabled(false);
-                    getOnBackPressedDispatcher().onBackPressed();
-                    setEnabled(true);
-                }
-            }
-        });
-
-        // Cargar perfil por defecto
+        // Fragment inicial
         if (savedInstanceState == null) {
             onOptionClicked("profile");
         }
@@ -58,6 +33,7 @@ public class MainActivity extends AppCompatActivity implements MenuFragment.OnOp
 
     @Override
     public void onOptionClicked(String option) {
+
         Fragment fragment;
 
         switch (option) {
@@ -78,20 +54,18 @@ public class MainActivity extends AppCompatActivity implements MenuFragment.OnOp
                 break;
         }
 
+        //
         getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.content_fragment_container, fragment)
                 .commit();
 
+        // Resaltar opción seleccionada
         MenuFragment menuFragment = (MenuFragment)
                 getSupportFragmentManager().findFragmentById(R.id.menu_fragment_container);
 
         if (menuFragment != null) {
             menuFragment.highlightOption(option);
-        }
-
-        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
-            drawerLayout.closeDrawer(GravityCompat.START);
         }
     }
 }

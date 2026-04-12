@@ -20,6 +20,10 @@
 
             <!-- Breadcrumb -->
             <TextView
+                android:id="@+id/txt_photos"
+                style="@style/MenuItemTextStyle"
+                android:visibility="gone"
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/mod_fotos"
