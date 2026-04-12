@@ -253,15 +253,15 @@
                 </FrameLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- EMAIL -->
+            <!-- CONTACTO -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:paddingVertical="14dp"
+                android:paddingVertical="16dp"
                 android:text="@string/email_subrayado"
                 android:textColor="@color/primary"
-                android:textSize="14sp"
+                android:textSize="17sp"
                 android:textStyle="bold" />
 
         </LinearLayout>

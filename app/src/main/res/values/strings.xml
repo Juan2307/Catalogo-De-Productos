@@ -4,14 +4,6 @@
     <string name="navigation_drawer_close">Cerrar menú</string>
 
 
-
-
-
-
-
-
-
-
     <!-- ================= FRAGMENTO PERFIL ================= -->
     <!-- Modulo Perfil (texto) -->
     <string name="mod_perfil">Modulo Perfil</string>
@@ -44,28 +36,10 @@
     <string name="desc_img_motivacional_perfil">Imagen motivacional de gimnasio</string>
 
     <!-- Motivacion (texto) -->
-    <string name="frase_gym_perfil">Encuentra tu límite con nosotros</string>
+    <string name="frase_gym_perfil">ENCUENTRA TU LIMITE CON NOSOTROS</string>
 
     <!-- ================= CONTACTO ================= -->
     <string name="email_subrayado"><u>sportpoli@corporative.com</u></string>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     <!-- ================= FRAGMENTO FOTOS ================= -->
@@ -111,17 +85,6 @@
     <string name="precio_prod4_fotos">$630.000</string>
 
 
-
-
-
-
-
-
-
-
-
-
-
     <!-- ================= FRAGMENTO VIDEOS ================= -->
     <!-- Modulo Fotos (texto) -->
     <string name="mod_videos">Modulo Videos</string>
@@ -135,25 +98,6 @@
     <string name="btn_play_Tenis">Tenis</string>
     <string name="btn_play_futbol">Fútbol</string>
     <string name="btn_play_salud">Salud</string>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     <!-- ================= FRAGMENTO BOTON ================= -->
@@ -204,9 +148,6 @@
 
     <!-- Fondo (imagen) -->
     <string name="desc_img_btn_fondo">Imagen boton fotos mot</string>
-
-
-
 
 
     <!-- ================= BOTONES FOOT ================= -->

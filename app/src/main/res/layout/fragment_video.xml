@@ -43,7 +43,7 @@
                     android:rotation="-20"
                     android:layout_alignParentEnd="true"
                     android:layout_marginEnd="-80dp"
-                    android:layout_marginTop="20dp"/>
+                    android:layout_marginTop="20dp" />
 
                 <!-- texto principal -->
                 <TextView
@@ -61,7 +61,7 @@
                     android:shadowColor="#20000000"
                     android:shadowDx="0"
                     android:shadowDy="3"
-                    android:shadowRadius="6"/>
+                    android:shadowRadius="6" />
 
             </RelativeLayout>
 
@@ -276,6 +276,7 @@
                     android:fontFamily="@font/nico_moji_regular" />
             </LinearLayout>
 
+            <!-- CONTACTO -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
