@@ -14,10 +14,12 @@ public class MenuFragment extends Fragment {
 
     public interface OnOptionClickListener {
         void onOptionClicked(String option);
+        void onToggleMenu();
     }
 
     private OnOptionClickListener listener;
     private String selectedOption = "profile";
+    private boolean isExpanded = false;
 
     public MenuFragment() {
         super(R.layout.fragment_menu);
@@ -33,9 +35,18 @@ public class MenuFragment extends Fragment {
 
         setupClickListeners(view);
         highlightOption(selectedOption);
+        updateExpansionState(view);
     }
 
     private void setupClickListeners(View view) {
+        View btnToggle = view.findViewById(R.id.btn_toggle_menu);
+        if (btnToggle != null) {
+            btnToggle.setOnClickListener(v -> {
+                if (listener != null) {
+                    listener.onToggleMenu();
+                }
+            });
+        }
 
         Map<String, View> items = new HashMap<>();
         items.put("profile", view.findViewById(R.id.btn_profile));
@@ -57,6 +68,31 @@ public class MenuFragment extends Fragment {
                 });
             }
         }
+    }
+
+    public void setExpanded(boolean expanded) {
+        this.isExpanded = expanded;
+        View view = getView();
+        if (view != null) {
+            updateExpansionState(view);
+        }
+    }
+
+    private void updateExpansionState(View view) {
+        int visibility = isExpanded ? View.VISIBLE : View.GONE;
+        
+        // El botón hamburguesa siempre está visible, pero podrías cambiar algo aquí si quisieras
+        
+        view.findViewById(R.id.txt_profile).setVisibility(visibility);
+        view.findViewById(R.id.txt_photos).setVisibility(visibility);
+        view.findViewById(R.id.txt_video).setVisibility(visibility);
+        view.findViewById(R.id.txt_web).setVisibility(visibility);
+        view.findViewById(R.id.txt_buttons).setVisibility(visibility);
+        
+        // Elementos del footer (Logo y Títulos abajo)
+        view.findViewById(R.id.txt_footer_name).setVisibility(visibility);
+        View slogan = view.findViewById(R.id.txt_footer_slogan);
+        if (slogan != null) slogan.setVisibility(visibility);
     }
 
     public void highlightOption(String option) {
