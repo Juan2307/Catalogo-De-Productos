@@ -1,63 +1,88 @@
 package com.example.catalogodeproductos;
 
 import android.os.Bundle;
+import android.view.View;
+import android.view.ViewGroup;
 
 import androidx.activity.OnBackPressedCallback;
-import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.core.view.GravityCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 
 public class MainActivity extends AppCompatActivity implements MenuFragment.OnOptionClickListener {
 
-    private DrawerLayout drawerLayout;
+    private View navContainer;
+
+    private boolean isMenuExpanded = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_main);
-
-        //
-//        Toast.makeText(this, "Entró a MainActivity", Toast.LENGTH_LONG).show();
 
         // Toolbar
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        // Drawer
-        drawerLayout = findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawerLayout, toolbar,
-                R.string.navigation_drawer_open, R.string.navigation_drawer_close
-        );
-        drawerLayout.addDrawerListener(toggle);
-        toggle.syncState();
+        navContainer = findViewById(R.id.nav_view_container);
 
         // Botón atrás
         getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
             @Override
             public void handleOnBackPressed() {
-                if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
-                    drawerLayout.closeDrawer(GravityCompat.START);
-                } else {
+
+                if (isMenuExpanded)
+                    toggleMenu();
+                else {
+
                     setEnabled(false);
                     getOnBackPressedDispatcher().onBackPressed();
                     setEnabled(true);
+
                 }
+
             }
+
         });
 
         // Cargar perfil por defecto
-        if (savedInstanceState == null) {
+        if (savedInstanceState == null)
             onOptionClicked("profile");
-        }
+
+    }
+
+    @Override
+    public void onToggleMenu() {
+
+        toggleMenu();
+
+    }
+
+    private void toggleMenu() {
+
+        isMenuExpanded = !isMenuExpanded;
+
+        ViewGroup.LayoutParams params = navContainer.getLayoutParams();
+
+        // Cambiado a 180dp para que no se expanda tanto
+        params.width = isMenuExpanded ?
+                (int) (180 * getResources().getDisplayMetrics().density) :
+                (int) (70 * getResources().getDisplayMetrics().density);
+
+        navContainer.setLayoutParams(params);
+
+        MenuFragment menuFragment = (MenuFragment)
+                getSupportFragmentManager().findFragmentById(R.id.menu_fragment_container);
+
+        if (menuFragment != null)
+            menuFragment.setExpanded(isMenuExpanded);
+
     }
 
     @Override
     public void onOptionClicked(String option) {
+
         Fragment fragment;
 
         switch (option) {
@@ -86,12 +111,11 @@ public class MainActivity extends AppCompatActivity implements MenuFragment.OnOp
         MenuFragment menuFragment = (MenuFragment)
                 getSupportFragmentManager().findFragmentById(R.id.menu_fragment_container);
 
-        if (menuFragment != null) {
+        if (menuFragment != null)
             menuFragment.highlightOption(option);
-        }
 
-        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
-            drawerLayout.closeDrawer(GravityCompat.START);
-        }
+        // El menú se queda en su estado actual (abierto o cerrado) al cambiar de módulo
+
     }
+
 }
