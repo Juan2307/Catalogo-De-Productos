@@ -14,6 +14,7 @@ public class MenuFragment extends Fragment {
 
     public interface OnOptionClickListener {
         void onOptionClicked(String option);
+
         void onToggleMenu();
     }
 
@@ -80,15 +81,15 @@ public class MenuFragment extends Fragment {
 
     private void updateExpansionState(View view) {
         int visibility = isExpanded ? View.VISIBLE : View.GONE;
-        
+
         // El botón hamburguesa siempre está visible, pero podrías cambiar algo aquí si quisieras
-        
+
         view.findViewById(R.id.txt_profile).setVisibility(visibility);
         view.findViewById(R.id.txt_photos).setVisibility(visibility);
         view.findViewById(R.id.txt_video).setVisibility(visibility);
         view.findViewById(R.id.txt_web).setVisibility(visibility);
         view.findViewById(R.id.txt_buttons).setVisibility(visibility);
-        
+
         // Elementos del footer (Logo y Títulos abajo)
         view.findViewById(R.id.txt_footer_name).setVisibility(visibility);
         View slogan = view.findViewById(R.id.txt_footer_slogan);

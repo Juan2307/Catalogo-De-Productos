@@ -12,10 +12,12 @@ import androidx.fragment.app.Fragment;
 public class MainActivity extends AppCompatActivity implements MenuFragment.OnOptionClickListener {
 
     private View navContainer;
+
     private boolean isMenuExpanded = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -29,46 +31,58 @@ public class MainActivity extends AppCompatActivity implements MenuFragment.OnOp
         getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
             @Override
             public void handleOnBackPressed() {
-                if (isMenuExpanded) {
+
+                if (isMenuExpanded)
                     toggleMenu();
-                } else {
+                else {
+
                     setEnabled(false);
                     getOnBackPressedDispatcher().onBackPressed();
                     setEnabled(true);
+
                 }
+
             }
+
         });
 
         // Cargar perfil por defecto
-        if (savedInstanceState == null) {
+        if (savedInstanceState == null)
             onOptionClicked("profile");
-        }
+
     }
 
     @Override
     public void onToggleMenu() {
+
         toggleMenu();
+
     }
 
     private void toggleMenu() {
+
         isMenuExpanded = !isMenuExpanded;
-        
+
         ViewGroup.LayoutParams params = navContainer.getLayoutParams();
+
         // Cambiado a 180dp para que no se expanda tanto
-        params.width = isMenuExpanded ? 
+        params.width = isMenuExpanded ?
                 (int) (180 * getResources().getDisplayMetrics().density) :
                 (int) (70 * getResources().getDisplayMetrics().density);
+
         navContainer.setLayoutParams(params);
 
         MenuFragment menuFragment = (MenuFragment)
                 getSupportFragmentManager().findFragmentById(R.id.menu_fragment_container);
-        if (menuFragment != null) {
+
+        if (menuFragment != null)
             menuFragment.setExpanded(isMenuExpanded);
-        }
+
     }
 
     @Override
     public void onOptionClicked(String option) {
+
         Fragment fragment;
 
         switch (option) {
@@ -97,10 +111,11 @@ public class MainActivity extends AppCompatActivity implements MenuFragment.OnOp
         MenuFragment menuFragment = (MenuFragment)
                 getSupportFragmentManager().findFragmentById(R.id.menu_fragment_container);
 
-        if (menuFragment != null) {
+        if (menuFragment != null)
             menuFragment.highlightOption(option);
-        }
-        
+
         // El menú se queda en su estado actual (abierto o cerrado) al cambiar de módulo
+
     }
+
 }
